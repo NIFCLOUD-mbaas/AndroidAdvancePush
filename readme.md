@@ -224,7 +224,7 @@ obj.saveInBackground(new DoneCallback() {
 ---
 ## ハンズオンの流れ
 
-__<font color="#49a7e5" size="3">第１回&nbsp;</font><font size="6">「mBaaS Shop List」アプリを作ろう！</font>__
+__<font color="#49a7e5" size="5">第１回&nbsp;</font><font size="6">「mBaaS Shop List」アプリを作ろう！</font>__
 
 .size_large[
 1. ハンズオンの準備
@@ -232,7 +232,7 @@ __<font color="#49a7e5" size="3">第１回&nbsp;</font><font size="6">「mBaaS S
 1. Shop情報の設定
 ]
 
-__<font color="#49a7e5" size="3">第２回&nbsp;</font><font size="6">お気に入り機能とプッシュ通知準備！</font>__
+__<font color="#49a7e5" size="5">第２回&nbsp;</font><font size="6">お気に入り機能とプッシュ通知準備！</font>__
 
 .size_large[
 1. お気に入り機能の作成
@@ -242,7 +242,7 @@ __<font color="#49a7e5" size="3">第２回&nbsp;</font><font size="6">お気に�
 ---
 ## ハンズオンの流れ（続き）
 
-__<font color="#49a7e5" size="3">第３回&nbsp;</font><font size="6">プッシュ通知を送ろう！</font>__
+__<font color="#49a7e5" size="5">第３回&nbsp;</font><font size="6">プッシュ通知を送ろう！</font>__
 .size_large[
 1. プッシュ通知を送信：セグメント配信
 1. プッシュ通知を送信：リッチプッシュ
@@ -317,7 +317,6 @@ layout: false
 buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.0'
-        classpath 'com.google.gms:google-services:4.3.3'
     }
 }
 
@@ -462,6 +461,11 @@ layout: false
 ```java
 //**************** 【mBaaS/User①】: 会員登録用メールを要求する】***************
 ```
+
+---
+## 会員管理機能の作成
+### 会員管理①：会員登録用メールを要求する
+
 * 会員登録処理は以下のように実装コードを追記してください。
 ```java
 //**************** 【mBaaS/User①】: 会員登録用メールを要求する】***************
@@ -864,7 +868,7 @@ lv.setAdapter(new ShopListAdapter(this, results));
 - コメントの下にコードを追記していきます
 
 ```java
-////**************** 【mBaaS/File①: ショップ画像を取得】***************
+//**************** 【mBaaS/File①: ショップ画像を取得】***************
 
 
 ```
@@ -884,14 +888,8 @@ lv.setAdapter(new ShopListAdapter(this, results));
                 public void done(byte[] data, NCMBException e) {
                     if (e != null) {
                         // 取得失敗時の処理
-                        Log.d(TAG, e.getMessage());
                     } else {
                         // 取得成功時の処理
-                        Bitmap bmp = null;
-                        if (data != null) {
-                            bmp = BitmapFactory.decodeByteArray(data, 0, data.length);
-                        }
-                        holder.img.setImageBitmap(bmp);
                     }
                 }
             });
@@ -950,7 +948,6 @@ holder.img.setImageBitmap(bmp);
 
 * 追記するコードは以下となっています。
 
-
 ```java
 
 //**************** 【mBaaS/File②: ショップ詳細画像を取得】***************
@@ -961,20 +958,34 @@ try {
         public void done(byte[] data, NCMBException e) {
             if (e != null) {
                 //取得失敗時の処理
-                Log.d(TAG, e.getMessage());
             } else {
                 //取得成功時の処理
-                Bitmap bmp = null;
-                if (data != null) {
-                    bmp = BitmapFactory.decodeByteArray(data, 0, data.length);
-                }
-                _shop_image.setImageBitmap(bmp);
             }
         }
     });
 } catch (NCMBException e) {
     e.printStackTrace();
 }
+```
+
+---
+## Shop情報の設定
+### ファイルストア②：Shop画像の取得
+
+* それぞれ処理を追記します
+
+```java
+//取得失敗時の処理
+Log.d(TAG, e.getMessage());
+```
+
+```java
+//取得成功時の処理
+Bitmap bmp = null;
+if (data != null) {
+    bmp = BitmapFactory.decodeByteArray(data, 0, data.length);
+}
+_shop_image.setImageBitmap(bmp);
 ```
 * これで、お店関連の実装準備ができました、動作確認(2)に進めます。
 
@@ -1387,19 +1398,20 @@ https://console.firebase.google.com/
 6. アプリで Firebase プロダクトを有効にするには、Gradle ファイルに google-services プラグインを追加します。
 
 * ルートレベル（プロジェクト レベル）の Gradleファイル（build.gradle）に、
-Googleサービス プラグインを含めるためのルールを追加します。
+Googleサービス プラグインを含めるためのルールを追加します。(コメントアウトを消してください)
+
 
 ```
 classpath 'com.google.gms:google-services:4.3.3'
 ```
 
 * モジュール（アプリレベル）の Gradle ファイル（通常は app/build.gradle）で、
-ファイルの末尾に以下の行を追加します。
+ファイルの末尾に以下の行を追加します。(コメントアウトを消してください)
 
 ```
 apply plugin: 'com.google.gms.google-services'
 ```
-※なお、アプリ側の上記以外の設定、詳細は[ドキュメント](https://mbaas.nifcloud.com/doc/current/push/basic_usage_android.html#%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A7%E3%81%AE%E8%A8%AD%E5%AE%9A)を参照してください。
+※なお、実施済みのアプリ側の設定、詳細は[ドキュメント](https://mbaas.nifcloud.com/doc/current/push/basic_usage_android.html#%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A7%E3%81%AE%E8%A8%AD%E5%AE%9A)を参照してください。
 
 
 ---
@@ -1558,20 +1570,24 @@ startActivityForResult(intent, REQUEST_RESULT );
 ```java
 //**************** 【mBaaS：プッシュ通知④】installationにユーザー情報を紐づける***************
 //端末情報を保存する
-NCMBInstallation currInstallation = NCMBInstallation.getCurrentInstallation();
-currInstallation.put("favorite", list);
-currInstallation.saveInBackground(new DoneCallback() {
-    @Override
-    public void done(NCMBException e) {
-        if (e != null) {
-            //保存失敗
-            Log.d(TAG, "端末情報を保存失敗しました。");
-        } else {
-            //保存成功
-            Log.d(TAG, "端末情報を保存成功しました。");
+try {
+    NCMBInstallation currInstallation = NCMBInstallation.getCurrentInstallation();
+    currInstallation.put("favorite", list);
+    currInstallation.saveInBackground(new DoneCallback() {
+        @Override
+        public void done(NCMBException e) {
+            if (e != null) {
+                //保存失敗
+                Log.d(TAG, "端末情報を保存失敗しました。");
+            } else {
+                //保存成功
+                Log.d(TAG, "端末情報を保存成功しました。");
+            }
         }
-    }
-});
+    });
+} catch (NCMBException e) {
+    e.printStackTrace();
+}
 ```
 
 ---
@@ -1596,20 +1612,24 @@ currInstallation.saveInBackground(new DoneCallback() {
 
 ```java
 //****************【mBaaS：プッシュ通知⑤】installationにユーザー情報を紐づける***************
-NCMBInstallation currInstallation  = NCMBInstallation.getCurrentInstallation();
-currInstallation.put("favorite", list);
-currInstallation.saveInBackground(new DoneCallback() {
-    @Override
-    public void done(NCMBException e) {
-        if (e != null) {
-            //保存失敗した場合の処理
-            Log.d(TAG, "端末情報を保存失敗しました。");
-        } else {
-            //保存成功した場合の処理
-            Log.d(TAG, "端末情報を保存成功しました。");
+try {
+    NCMBInstallation currInstallation  = NCMBInstallation.getCurrentInstallation();
+    currInstallation.put("favorite", list);
+    currInstallation.saveInBackground(new DoneCallback() {
+        @Override
+        public void done(NCMBException e) {
+            if (e != null) {
+                //保存失敗した場合の処理
+                Log.d(TAG, "端末情報を保存失敗しました。");
+            } else {
+                //保存成功した場合の処理
+                Log.d(TAG, "端末情報を保存成功しました。");
+            }
         }
-    }
-});
+    });
+} catch (NCMBException e) {
+    e.printStackTrace();
+}
 ```
 ---
 ## プッシュ通知を送信：セグメント配信
@@ -1952,6 +1972,10 @@ if (remoteMessage != null && remoteMessage.getData() != null) {
 
 
 ---
+### プッシュ通知を送信：ペイロード
+### プッシュ通知⑦：アプリがプッシュ通知からデータを取得する</br>
+
+* 以下を「ペイロード処理実装」コメント場所に追記します
 
 ```java
 //ペイロード処理実装
@@ -1974,7 +1998,6 @@ PendingIntent broadcast = PendingIntent.getBroadcast(this, 100,
 notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 alarmManager.setExact(AlarmManager.RTC_WAKEUP, triggerlMilli , broadcast);
 ```
-
 
 ---
 ## プッシュ通知を送信：ペイロード
