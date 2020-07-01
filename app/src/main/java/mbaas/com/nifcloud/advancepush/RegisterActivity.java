@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.nifcloud.mbaas.core.NCMBException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,12 +56,14 @@ public class RegisterActivity extends AppCompatActivity {
         Integer id = _groupGender.getCheckedRadioButtonId();
         String selectedGender = (String) ((RadioButton) findViewById(id)).getText();
         final List<String> list = new ArrayList<>();
+        try {
+            //**************** 【mBaaS/User③: ユーザー情報更新】***************
 
-        //**************** 【mBaaS/User③: ユーザー情報更新】***************
+            //**************** 【mBaaS：プッシュ通知②】installationにユーザー情報を紐づける ***************
 
-
-        //**************** 【mBaaS：プッシュ通知②】installationにユーザー情報を紐づける ***************
-
+        } catch (NCMBException e) {
+            e.printStackTrace();
+        }
 
     }
 }

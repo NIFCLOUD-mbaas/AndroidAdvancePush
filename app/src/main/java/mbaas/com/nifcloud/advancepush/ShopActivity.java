@@ -101,24 +101,7 @@ public class ShopActivity extends AppCompatActivity {
 
 
         //****************【mBaaS：プッシュ通知⑤】installationにユーザー情報を紐づける***************
-        try {
-            NCMBInstallation currInstallation  = NCMBInstallation.getCurrentInstallation();
-            currInstallation.put("favorite", list);
-            currInstallation.saveInBackground(new DoneCallback() {
-                @Override
-                public void done(NCMBException e) {
-                    if (e != null) {
-                        //保存失敗した場合の処理
-                        Log.d(TAG, "端末情報を保存失敗しました。");
-                    } else {
-                        //保存成功した場合の処理
-                        Log.d(TAG, "端末情報を保存成功しました。");
-                    }
-                }
-            });
-        } catch (NCMBException e) {
-            e.printStackTrace();
-        }
+
 
     }
 
