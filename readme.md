@@ -101,7 +101,6 @@ https://mbaas.nifcloud.com/en/
 
 「mBaaS Shop List」アプリの作成を通して、お店の情報、お気に入り情報を
 データストア機能を利用して、データ登録、表示、管理を行います。
-これらの機能は会員機能を用いて実装を行います。
 
 ---
 ## 今回のハンズオンセミナーについて
@@ -302,6 +301,12 @@ layout: false
 * AndroidStudioでプロジェクトのファイル構成を確認します。
   - 以下のように処理のファイルが入っていることをご確認ください。
 
+---
+layout: false
+## ハンズオンの準備
+### プロジェクトを準備
+
+
 .center[
 ![AndroidStudio 4](readme-image/android4.png)
 ]
@@ -483,9 +488,6 @@ NCMBUser.requestAuthenticationMailInBackground(email, new DoneCallback() {
 ```
 
 ---
-## 会員管理機能の作成
-### 会員管理①：会員登録用メールを要求する[実装済み]
-
 * それぞれ処理を追記してください
 
 ```java
