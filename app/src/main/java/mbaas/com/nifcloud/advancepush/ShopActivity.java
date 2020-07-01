@@ -154,7 +154,6 @@ public class ShopActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
         //****************【mBaaS：プッシュ通知⑤】installationにユーザー情報を紐づける***************
         try {
             NCMBInstallation currInstallation  = NCMBInstallation.getCurrentInstallation();

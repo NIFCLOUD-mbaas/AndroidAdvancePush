@@ -66,8 +66,9 @@ public class RegisterActivity extends AppCompatActivity {
         String selectedGender = (String) ((RadioButton) findViewById(id)).getText();
         final List<String> list = new ArrayList<>();
 
-        //**************** 【mBaaS/User③: ユーザー情報更新】***************
+
         try {
+            //**************** 【mBaaS/User③: ユーザー情報更新】***************
             common.currentUser.put("nickname", nickname);
             common.currentUser.put("prefecture", prefecture);
             common.currentUser.put("gender", selectedGender);
