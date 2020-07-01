@@ -1123,19 +1123,23 @@ layout: false
 //**************** 【mBaaS/User ④: 会員情報更新】***************
 List<String> list = new ArrayList<String>();
 list = common.currentUser.getList("favorite");
-common.currentUser.put("favorite", list);
-common.currentUser.saveInBackground(new DoneCallback() {
-    @Override
-    public void done(NCMBException e) {
-        if (e != null) {
-            //保存失敗時の処理
+try {
+    common.currentUser.put("favorite", list);
+    common.currentUser.saveInBackground(new DoneCallback() {
+        @Override
+        public void done(NCMBException e) {
+            if (e != null) {
+                //保存失敗時の処理
 
-        } else {
-            //保存成功時の処理
+            } else {
+                //保存成功時の処理
 
+            }
         }
-    }
-});
+    });
+} catch (NCMBException e) {
+    e.printStackTrace();
+}
 ```
 
 ---
@@ -1194,19 +1198,23 @@ new AlertDialog.Builder(FavoriteActivity.this)
 List<String> list = new ArrayList<String>();
 list = common.currentUser.getList("favorite");
 list.add(objId);
-common.currentUser.put("favorite", list);
-common.currentUser.saveInBackground(new DoneCallback() {
-    @Override
-    public void done(NCMBException e) {
-        if (e != null) {
-            //更新失敗時の処理
+try {
+    common.currentUser.put("favorite", list);
+    common.currentUser.saveInBackground(new DoneCallback() {
+        @Override
+        public void done(NCMBException e) {
+            if (e != null) {
+                //更新失敗時の処理
 
-        } else {
-            //更新成功時の処理
+            } else {
+                //更新成功時の処理
 
+            }
         }
-    }
-});
+    });
+} catch (NCMBException e) {
+    e.printStackTrace();
+}
 ```
 
 ---
