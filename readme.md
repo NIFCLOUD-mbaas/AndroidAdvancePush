@@ -18,7 +18,7 @@ layout: false
 
 ![mBaaS検索](readme-image/mBaaS検索.png)
 
-![mBaaS検索](readme-image/mBaaS無料登録.png)
+![mBaaS検索](readme-image/mBaaS無料登録.png){ width=50%}
 
 
 ---
