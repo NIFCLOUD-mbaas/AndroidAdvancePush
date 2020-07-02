@@ -590,8 +590,7 @@ AlertDialog show = new AlertDialog.Builder(LoginActivity.this)
                     startActivityForResult(intent, REQUEST_RESULT);
                 } else {
                     //初期ログイン会員登録画面遷移します
-                    Toast.makeText(LoginActivity.this, "Register user information
-                    for the first time!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, "Register user information for the first time!", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(getApplicationContext(),
                     RegisterActivity.class);
                     startActivityForResult(intent, REQUEST_RESULT);
@@ -1435,15 +1434,20 @@ apply plugin: 'com.google.gms.google-services'
 
 * AndroidManifestファイルを開き、applicationタグの要素としてserviceの登録を行います。(デフォルトのAndroid SDK
   が提供するサービス)
+* 以下のコメントの下に追記してください。
+```
+<!--  NOTICE: Push received service will be insert here -->
+```
 
 ```
- <service
+<!--  NOTICE: Push received service will be insert here -->
+<service
      android:name="com.nifcloud.mbaas.core.NCMBFirebaseMessagingService"
      android:exported="false">
      <intent-filter>
          <action android:name="com.google.firebase.MESSAGING_EVENT"/>
      </intent-filter>
- </service>
+</service>
 ```
 
 
@@ -1915,7 +1919,7 @@ layout: false
 ### プッシュ通知⑦：アプリが起動中にプッシュ通知からデータを取得する
 
 * AndroidManifestファイルを開きます
-* 修正前
+* 修正前（プッシュ通知設定時に追記いただいた内容）
 
 ```
 <service
@@ -2023,7 +2027,7 @@ alarmManager.setExact(AlarmManager.RTC_WAKEUP, triggerlMilli , broadcast);
 ### 動作確認(6)ペイロード（アプリ起動時）
 
 * 実機でアプリをビルドします
-* 起動し、下記ログを確認します
+* 起動し、下記ログを確認します。下記のログが出たら保存が成功しました。
 
 ```text
 端末情報を保存成功しました。
