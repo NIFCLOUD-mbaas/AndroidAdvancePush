@@ -16,7 +16,13 @@ import android.widget.ListView;
 import com.nifcloud.mbaas.core.DoneCallback;
 import com.nifcloud.mbaas.core.NCMB;
 import com.nifcloud.mbaas.core.NCMBException;
+import com.nifcloud.mbaas.core.NCMBObject;
+import com.nifcloud.mbaas.core.NCMBPush;
+import com.nifcloud.mbaas.core.NCMBQuery;
 import com.nifcloud.mbaas.core.NCMBUser;
+
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 

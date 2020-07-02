@@ -1,14 +1,20 @@
 package mbaas.com.nifcloud.advancepush;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.nifcloud.mbaas.core.DoneCallback;
 import com.nifcloud.mbaas.core.NCMBException;
+import com.nifcloud.mbaas.core.NCMBInstallation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,14 +62,12 @@ public class RegisterActivity extends AppCompatActivity {
         Integer id = _groupGender.getCheckedRadioButtonId();
         String selectedGender = (String) ((RadioButton) findViewById(id)).getText();
         final List<String> list = new ArrayList<>();
-        try {
-            //**************** 【mBaaS/User③: ユーザー情報更新】***************
 
-            //**************** 【mBaaS：プッシュ通知②】installationにユーザー情報を紐づける ***************
+        //**************** 【mBaaS/User③: ユーザー情報更新】***************
 
-        } catch (NCMBException e) {
-            e.printStackTrace();
-        }
+
+        //**************** 【mBaaS：プッシュ通知②】installationにユーザー情報を紐づける ***************
+
 
     }
 }
