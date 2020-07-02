@@ -704,23 +704,28 @@ NCMBUser.loginWithMailAddressInBackground(email, password, new LoginCallback());
 
 ```java
 //**************** 【mBaaS/User③: ユーザー情報更新】***************
-common.currentUser.put("nickname", nickname);
-common.currentUser.put("prefecture", prefecture);
-common.currentUser.put("gender", selectedGender);
-common.currentUser.put("favorite",list);
+try {
+    common.currentUser.put("nickname", nickname);
+    common.currentUser.put("prefecture", prefecture);
+    common.currentUser.put("gender", selectedGender);
+    common.currentUser.put("favorite",list);
 
-common.currentUser.saveInBackground(new DoneCallback() {
-    @Override
-    public void done(NCMBException e) {
-        if (e != null) {
-            // 更新失敗時の処理
+    common.currentUser.saveInBackground(new DoneCallback() {
+        @Override
+        public void done(NCMBException e) {
+            if (e != null) {
+                // 更新失敗時の処理
 
-        } else {
-            // 更新成功時の処理
+            } else {
+                // 更新成功時の処理
 
+            }
         }
-    }
-});
+    });
+} catch (NCMBException e) {
+      e.printStackTrace();
+}
+
 
 ```
 
@@ -1523,20 +1528,24 @@ layout: false
 
 ```java
 //**************** 【mBaaS：プッシュ通知②】installationにユーザー情報を紐づける ***************
-NCMBInstallation currInstallation  = NCMBInstallation.getCurrentInstallation();
-currInstallation.put("prefecture", prefecture);
-currInstallation.put("gender", selectedGender);
-currInstallation.put("favorite", list);
-currInstallation.saveInBackground(new DoneCallback() {
-    @Override
-    public void done(NCMBException e) {
-        if (e != null) {
-            //更新失敗時の処理
-        } else {
-            //更新成功時の処理
+try {
+    NCMBInstallation currInstallation  = NCMBInstallation.getCurrentInstallation();
+    currInstallation.put("prefecture", prefecture);
+    currInstallation.put("gender", selectedGender);
+    currInstallation.put("favorite", list);
+    currInstallation.saveInBackground(new DoneCallback() {
+        @Override
+        public void done(NCMBException e) {
+            if (e != null) {
+                //更新失敗時の処理
+            } else {
+                //更新成功時の処理
+            }
         }
-    }
-});
+    });
+} catch (NCMBException e) {
+    e.printStackTrace();
+}
 ```
 
 ---
