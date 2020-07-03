@@ -22,11 +22,11 @@ to register your account.
 ---
 ## Preparation
 Register with one of the following accounts
-- Registration with SNS ID（credit card payment）*Available for free
+- Registration with SNS ID（credit card payment）* Available for free
   - You can register with your SNS account login. Facebook, Twitter and Google are available.
   - Register from [Here](https://console.mbaas.nifcloud.com/signup)
-  - *It is recommended for the access from outside of Japan (Described on the next page)
-- Registration with NIFCLOUD ID（Invoice payment) *For Expert plan or higher plan
+  - * It is recommended for the access from outside of Japan (Described on the next page)
+- Registration with NIFCLOUD ID（Invoice payment) * For Expert plan or higher plan
   - You need to register NIFCLOUD ID first.
   - Register from [Here](https://sso.nifcloud.com/auth/realms/nifcloud/protocol/openid-connect/registrations?client_id=user-registration&response_type=code&redirect_uri=%2Fcomp-registration.html&entry_code=N00000470100)
 
@@ -98,8 +98,7 @@ We will supplementary explain for those, but we appreciated your understanding i
 ### Contents：How to Use Datastore Function
 
 Through the creation of "mBaaS Shop List" App, we will register, display and manage
-the data of shop information and user's favorites information using the datastore function.
-These functions to be implemented using the datastore function.
+the data of shop information and user's favorites information using the Datastore Management function.
 
 ---
 ## About this Hands-on Seminar
@@ -221,7 +220,7 @@ obj.saveInBackground(new DoneCallback() {
 ---
 ## Agenda for Hands-on
 
-__<font color="#49a7e5" size="3">Day 1&nbsp;</font><font size="6">Let's create"mBaaS Shop List" App!</font>__
+__<font color="#49a7e5" size="5">Day 1&nbsp;</font><font size="6">Let's create"mBaaS Shop List" App!</font>__
 
 .size_large[
 1. Preparation for Hands-on
@@ -229,7 +228,7 @@ __<font color="#49a7e5" size="3">Day 1&nbsp;</font><font size="6">Let's create"m
 1. Setting Shop Information
 ]
 
-__<font color="#49a7e5" size="3">Day 2&nbsp;</font><font size="6">Let's prepare for Favorite features and push notifications!</font>__
+__<font color="#49a7e5" size="5">Day 2&nbsp;</font><font size="6">Let's prepare for Favorite features and push notifications!</font>__
 
 .size_large[
 1. Create a Favorites Feature
@@ -239,9 +238,9 @@ __<font color="#49a7e5" size="3">Day 2&nbsp;</font><font size="6">Let's prepare 
 ---
 ## Agenda for Hands-on (continued)
 
-__<font color="#49a7e5" size="3">Day 3&nbsp;</font><font size="6">Let's deliver push notifications!</font>__
+__<font color="#49a7e5" size="5">Day 3&nbsp;</font><font size="6">Let's deliver push notifications!</font>__
 .size_large[
-1. Deliver push notifications: segment delivery
+1. Deliver push notifications: Segment delivery
 1. Deliver push notification: Rich push
 1. Deliver push notification: Payload
 ]
@@ -314,7 +313,6 @@ layout: false
 buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.0'
-        classpath 'com.google.gms:google-services:4.3.3'
     }
 }
 
@@ -434,7 +432,7 @@ layout: false
 
 * mBaaS has "ID/Password Authentication" and "Email Address/Password Authentication" as User Management function.
 In this hands-on, we will use "Email Address/Password Authentication" function.
-* Allow "Email Address/Password Authentication" in User Management settings.
+* Allow "Email Address/Password Authentication" in User Authentication Settings.
 
 .center[
 ![mBaaS会員設定](readme-image-en/mBaaS会員設定.png)
@@ -614,7 +612,8 @@ AlertDialog show = new AlertDialog.Builder(LoginActivity.this)
 ## Create User Management Function
 ### Operation check(1)Let's log in
 
-* You will receive a member registration email, then set a password
+* You will receive a member registration email, then set a password for new user, repeat the password once more for confirmation of password
+*  (Form is shown in Japanese, but it can customized, we skipped this time)
 
 .center[
 ![動作確認①パスワード登録](readme-image-en/動作確認①パスワード登録.png)
@@ -860,7 +859,7 @@ lv.setAdapter(new ShopListAdapter(this, results));
 - We are now going to add code below the comment.
 
 ```java
-////**************** 【mBaaS/File①: shop image acquisition】***************
+//**************** 【mBaaS/File①: shop image acquisition】***************
 
 
 ```
@@ -936,7 +935,7 @@ holder.img.setImageBitmap(bmp);
 -  We are now going to add code below the comment.
 
 ```java
-////**************** 【mBaaS/File②: acquire shop detail image】***************
+//**************** 【mBaaS/File②: acquire shop detail image】***************
 
 ```
 
@@ -1000,7 +999,7 @@ try {
 ## Setting Shop Information
 ### Operation check(2)Register Member Information and Diplay Shop Information
 
-* After the registration of user information (only appreares at first time) is completed, the top screen of the App to be displayed. (The top screen will be directly displayed from the 2nd log in.)
+* After the registration of user information (only appears at first time) is completed, the top screen of the App to be displayed. (The top screen will be directly displayed from the 2nd log in.)
 * "icon image", "Shop Name" and "Category" to be displayed on the top screen.
 * Select 1 Shop and tap it.
  * Access to the image registered in mBaaS, and the Shop page (Image) appears.
@@ -1049,7 +1048,7 @@ NCMBFile file = new NCMBFile(filename);
 file.fetchInBackground(new FetchFileCallback());
 ```
 
-*Here is the end for Day1.
+* Here is the end for Day1.
 
 ---
 layout: true
@@ -1090,7 +1089,7 @@ layout: false
 - We are now going to add code below the comment.
 
 ```java
-////**************** 【mBaaS/User ④: Update member information】***************
+//**************** 【mBaaS/User ④: Update member information】***************
 
 
 ```
@@ -1161,7 +1160,7 @@ new AlertDialog.Builder(FavoriteActivity.this)
 - We are now going to add code below the comment.
 
 ```java
-////**************** 【mBaaS/User⑤: Update member information】***************
+//**************** 【mBaaS/User⑤: Update member information】***************
 
 
 ```
@@ -1308,18 +1307,32 @@ https://console.firebase.google.com/
 ### Preparation for Push Notification
 
 * On upper left corner of the created project there is a link "Project OverView".
-* Move the cursor to the gear button, and the menu will appear. Click "Project Settings".
-* This takes you to the Firebase Project Settings screen. Select "Service Account" from the tab menu on the setting screen.
+* Move the cursor to the gear button, and the menu will appear. Click "Project Settings". This takes you to the Firebase Project Settings screen.
+
+.center[
+![コード解説③](readme-image-en/Firebase_projectsettings.png)
+]
+
+---
+
+## Preparation for Push Notification
+### Preparation for Push Notification
+
+* Select "Service Account" from the tab menu on the setting screen.
+
+.center[
+![コード解説③](readme-image-en/Firebase_serviceaccount.png)
+]
 
 ---
 ## Preparation for Push Notification
 ### Set Firebase Private Key to Mobile Backend
 
-* Click "Create a New Private Key" in the "Service Account" screen, then click "Create Key" in the modal that appears.
-* Firebase private key to be created, so download it.
+* Click "Generate new private key" in the "Service Account" screen, then click "Create Key" in the modal that appears.
+* Firebase private key to be created, so download it. It will be used to setup to Mobile backend.
 
 .center[
-![projectnumber](readme-image-en/projectnumber.png)
+![projectnumber](readme-image-en/firebase_privatekey.png)
 ]
 
 
@@ -1327,7 +1340,7 @@ https://console.firebase.google.com/
 ## Preparation for Push Notification
 ### Set Firebase Private Key to Mobile Backend
 
-* Select "Application Settings" at the top right of mBaaS administration screen and select "Push Notification".
+* Select "App Settings" at the top right of mBaaS administration screen and select "Push Notification".
 * Validate push notifications function
 * Set the private key downloaded in the previous step as the push notification configuration file (json).
 
@@ -1358,7 +1371,7 @@ https://console.firebase.google.com/
 
 4. Publish google-services.json and register in the App
 * Enter the application ID in the [Android Package Name] field.</br>
-i.e.) com.nifcloud.AndroidAdvancePushApp *package name of the current project
+i.e.) com.nifcloud.AndroidAdvancePushApp * package name of the current project
 
 .center[
 ![アプリ登録](readme-image-en/RegisterApp.png)
@@ -1393,7 +1406,7 @@ classpath 'com.google.gms:google-services:4.3.3'
 ```
 apply plugin: 'com.google.gms.google-services'
 ```
-*Please refer to the [document](https://mbaas.nifcloud.com/doc/current/push/basic_usage_android.html#%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A7%E3%81%AE%E8%A8%AD%E5%AE%9A) for more details of the settings of App side
+* Please refer to the [document](https://mbaas.nifcloud.com/doc/current/push/basic_usage_android.html#%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A7%E3%81%AE%E8%A8%AD%E5%AE%9A) for more details of the settings of App side
 
 
 ---
@@ -1404,13 +1417,18 @@ apply plugin: 'com.google.gms.google-services'
   (Service provided by the default Android SDK)
 
 ```
- <service
+<!--  NOTICE: Push received service will be insert here -->
+```
+
+```
+<!--  NOTICE: Push received service will be insert here -->
+<service
      android:name="com.nifcloud.mbaas.core.NCMBFirebaseMessagingService"
      android:exported="false">
      <intent-filter>
          <action android:name="com.google.firebase.MESSAGING_EVENT"/>
      </intent-filter>
- </service>
+</service>
 ```
 
 
@@ -1443,9 +1461,9 @@ NCMB.initialize(this.getApplicationContext(),"APP_KEY","CLIENT_KEY");
 * Open "Push Notification" on mBaaS administration screen, and click "+ New Push Notification".
 * On the Push Notification setting screen:
  * Enter message and title as you want
- * Leave [Deliver Immedediately] as it is.
- * Check [Deliver to Android device].
- * Click [New push notifications] , and deliver
+ * Leave [Deliver Immediately] as it is.
+ * Check [Deliver to Android devices].
+ * Click [New push notification] , and deliver
 
 ---
 ## Preparation for Push Notification
@@ -1455,7 +1473,7 @@ NCMB.initialize(this.getApplicationContext(),"APP_KEY","CLIENT_KEY");
 * Open "Push Notification" on mBaaS administration screen, and check the status of created push notification in the push notification list.
 * If it is succeded, "Delivered" is displayed.
 * If error occurs, please refer to the [document](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#%E3%80%8C%E9%85%8D%E4%BF%A1%E3%82%A8%E3%83%A9%E3%83%BC%E5%86%85%E5%AE%B9%E3%80%8D%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6) , and Review the settings.
-* *This is the end of this seminar. Next time, we will learn how to take advantage of push notifications and practice them.
+* This is the end of this seminar. Next time, we will learn how to take advantage of push notifications and practice them.
 
 ---
 layout: true
@@ -1495,20 +1513,24 @@ layout: false
 
 ```java
 //**************** 【mBaaS：Push Notification②】link user information to installation ***************
-NCMBInstallation currInstallation  = NCMBInstallation.getCurrentInstallation();
-currInstallation.put("prefecture", prefecture);
-currInstallation.put("gender", selectedGender);
-currInstallation.put("favorite", list);
-currInstallation.saveInBackground(new DoneCallback() {
-    @Override
-    public void done(NCMBException e) {
-        if (e != null) {
-            //Process at update failure
-        } else {
-            //Process on successful update
+try {
+    NCMBInstallation currInstallation  = NCMBInstallation.getCurrentInstallation();
+    currInstallation.put("prefecture", prefecture);
+    currInstallation.put("gender", selectedGender);
+    currInstallation.put("favorite", list);
+    currInstallation.saveInBackground(new DoneCallback() {
+        @Override
+        public void done(NCMBException e) {
+            if (e != null) {
+                //Process at update failure
+            } else {
+                //Process on successful update
+            }
         }
-    }
-});
+    });
+} catch (NCMBException e) {
+    e.printStackTrace();
+}
 ```
 
 ---
@@ -1552,20 +1574,24 @@ startActivityForResult(intent, REQUEST_RESULT );
 ```java
 //**************** 【mBaaS：Push Notification④】link user information to installation***************
 //save device information
-NCMBInstallation currInstallation = NCMBInstallation.getCurrentInstallation();
-currInstallation.put("favorite", list);
-currInstallation.saveInBackground(new DoneCallback() {
-    @Override
-    public void done(NCMBException e) {
-        if (e != null) {
-            //Save Failed
-            Log.d(TAG, "Failed to save device information.");
-        } else {
-            //Save Successful
-            Log.d(TAG, "Saving device information succeeded.");
+try {
+    NCMBInstallation currInstallation = NCMBInstallation.getCurrentInstallation();
+    currInstallation.put("favorite", list);
+    currInstallation.saveInBackground(new DoneCallback() {
+        @Override
+        public void done(NCMBException e) {
+            if (e != null) {
+                //Save Failed
+                Log.d(TAG, "Failed to save device information.");
+            } else {
+                //Save Successful
+                Log.d(TAG, "Saving device information succeeded.");
+            }
         }
-    }
-});
+    });
+} catch (NCMBException e) {
+    e.printStackTrace();
+}
 ```
 
 ---
@@ -1590,20 +1616,24 @@ currInstallation.saveInBackground(new DoneCallback() {
 
 ```java
 //****************【mBaaS：Push Notification⑤】link user information to installation***************
-NCMBInstallation currInstallation  = NCMBInstallation.getCurrentInstallation();
-currInstallation.put("favorite", list);
-currInstallation.saveInBackground(new DoneCallback() {
-    @Override
-    public void done(NCMBException e) {
-        if (e != null) {
-            //Process at saving fails
-            Log.d(TAG, "Failed to save device information");
-        } else {
-            //Process on successful save
-            Log.d(TAG, "Saving device information succeeded.");
+try {
+    NCMBInstallation currInstallation  = NCMBInstallation.getCurrentInstallation();
+    currInstallation.put("favorite", list);
+    currInstallation.saveInBackground(new DoneCallback() {
+        @Override
+        public void done(NCMBException e) {
+            if (e != null) {
+                //Process at saving fails
+                Log.d(TAG, "Failed to save device information");
+            } else {
+                //Process on successful save
+                Log.d(TAG, "Saving device information succeeded.");
+            }
         }
-    }
-});
+    });
+} catch (NCMBException e) {
+    e.printStackTrace();
+}
 ```
 ---
 ## Deliver Push Notification：Segment Delivery
@@ -1630,7 +1660,7 @@ Saving device information succeeded.
 * Once the device token has been successfully acquired, verify it on the mBaaS administration screen.
 
 .center[
-![動作確認④デバイストークン](readme-image-en/動作確認④デバイストークン.png)
+![動作確認④デバイストークン](readme-image-en/installation_registered_mbaas.png)
 ]
 
 .footnote[
