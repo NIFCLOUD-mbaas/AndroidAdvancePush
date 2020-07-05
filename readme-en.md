@@ -942,8 +942,8 @@ holder.img.setImageBitmap(bmp);
 ---
 
 * Here is the code we are going to add
-```java
 
+```java
 //**************** 【mBaaS/File②: acquire shop detail image】***************
 try {
     NCMBFile file = new NCMBFile(shop_image);
@@ -967,6 +967,7 @@ try {
     e.printStackTrace();
 }
 ```
+
 * The implementation for shop-related information is now done. Let's move on to the operation check.
 
 ---
@@ -1281,7 +1282,7 @@ layout: false
  * Set Firebase private key to mobile backend
  * Put google-service.json in App
 * Detailed instructions for the push notification setting file (json) are described below.
- * [【Sample】Let's implemeent push notifications into the App!](https://github.com/NIFCLOUD-mbaas/android_push_demo#手順)
+ * [【Sample】Let's implement push notifications into the App!](https://github.com/NIFCLOUD-mbaas/android_push_demo#手順)
 
 
 ---
