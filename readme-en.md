@@ -2142,37 +2142,7 @@ layout: false
 
 Thank you very much for joining us. It would be great if you could tell us about NIFCLOUD mobile backend through questionnaire.
 
-・Did this hands-on seminar deepen your understanding of mobile backend? (five step evaluation)
-・How difficult was this hands-on seminar? (five step evaluation)
-・Which features of mobile backend can actually help your actual work. (Multiple Selection)
-　・Reduce the development effort　
-　・Reduce the number of man-hours　
-　・There are plenty of samples.　
-　・Easy-to-use admin screen
-　・Easy understanding API specifications　
-　・There are many use cases with large business.
-　・Fixed-price charge　
-　・Learn how to use other users from the user community
-
-・Which function you are interested in among mobile backend. (Multiple Selection)
-　・Push notification
-　・User Management
-　・Data store
-　・File store
-　・Script
-
-・Which language you usually use. (Multiple Selection)
-　・Objective-C
-　・Swift
-　・Java
-　・Kotlin
-　・JavaScript
-　・C#
-
-・Please let us know if you need further assistance on mBaaS (free description).
-
-・Any other comments
-
+<<Survey URL>>
 ---
 ## Reference
 
