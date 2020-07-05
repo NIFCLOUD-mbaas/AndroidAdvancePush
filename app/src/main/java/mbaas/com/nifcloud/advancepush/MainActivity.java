@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         //**************** 【mBaaS/Initialization: APIキーを指定する】***************
+        //**************** 【mBaaS/Initialization: Specify API key】***************
 
 
         // グローバル変数を扱うクラスを取得する
@@ -130,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void doLoadShop() throws NCMBException {
         //**************** 【mBaaS/Shop①: 「Shop」クラスのデータを取得】***************
+        //**************** 【mBaaS/Shop①: Obtain data of "Shop" class】***************
 
     }
 
@@ -139,6 +141,8 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
 
         //**************** 【mBaaS：プッシュ通知⑥】リッチプッシュ通知を表示させる処理 ***************
+        //********** 【mBaaS：Push Notification⑥】process for displaying rich push notifications *********
+
 
     }
 

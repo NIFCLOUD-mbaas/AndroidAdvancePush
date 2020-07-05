@@ -59,6 +59,7 @@ public class SignupActivity extends AppCompatActivity {
 
     protected void doSignupByEmail() {
         //**************** 【mBaaS/User①】: 会員登録用メールを要求する】***************
+        //**************** 【mBaaS/User①】: Request a Membership Registration email】***************
 
 
     }

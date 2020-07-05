@@ -27,6 +27,8 @@ public class MyCustomFirebaseMessagingService extends NCMBFirebaseMessagingServi
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         //**************** 【mBaaS：プッシュ通知⑦】プッシュ通知からデータを取得する***************
+        //******** 【mBaaS：Push Notification⑦】App Obtains Data from Push Notification********
+
 
         //デフォルトの通知
         super.onMessageReceived(remoteMessage);

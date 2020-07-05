@@ -60,6 +60,7 @@ public class ShopActivity extends AppCompatActivity {
             _shop_name.setText(name);
 
             //**************** 【mBaaS/File②: ショップ詳細画像を取得】***************
+            //**************** 【mBaaS/File②: acquire shop detail image】***************
 
 
 
@@ -98,9 +99,11 @@ public class ShopActivity extends AppCompatActivity {
 
     protected void doFavoriteRegister(final String objId, final String name, final String shop_image) {
         //**************** 【mBaaS/User⑤: 会員情報更新】***************
+        //**************** 【mBaaS/User⑤: Update member information】***************
 
 
         //****************【mBaaS：プッシュ通知⑤】installationにユーザー情報を紐づける***************
+        //****************【mBaaS：Push Notification⑤】link user information to installation***************
 
 
     }

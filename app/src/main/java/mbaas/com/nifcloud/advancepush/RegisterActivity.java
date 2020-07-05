@@ -64,9 +64,11 @@ public class RegisterActivity extends AppCompatActivity {
         final List<String> list = new ArrayList<>();
 
         //**************** 【mBaaS/User③: ユーザー情報更新】***************
+        //**************** 【mBaaS/User③: Update User Information】***************
 
 
         //**************** 【mBaaS：プッシュ通知②】installationにユーザー情報を紐づける ***************
+        //**************** 【mBaaS：Push Notification②】link user information to installation ***************
 
 
     }

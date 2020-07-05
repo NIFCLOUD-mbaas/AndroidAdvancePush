@@ -63,9 +63,10 @@ public class FavoriteActivity extends AppCompatActivity {
 
     protected void doFavoriteSave() {
         //**************** 【mBaaS/User ④: 会員情報更新】***************
-
+        //**************** 【mBaaS/User ④: Update member information】***************
 
         //**************** 【mBaaS：プッシュ通知④】installationにユーザー情報を紐づける***************
+        //**************** 【mBaaS：Push Notification④】link user information to installation***************
 
 
     }
