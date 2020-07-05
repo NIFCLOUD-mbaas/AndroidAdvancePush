@@ -1378,9 +1378,6 @@ i.e.) com.nifcloud.AndroidAdvancePushApp * package name of the current project
 
 ---
 
-## Preparation for Push Notification
-### Set google-services.json File
-
 .center[
 ![アプリ登録](readme-image-en/RegisterApp.png)
 ]
@@ -1394,8 +1391,6 @@ i.e.) com.nifcloud.AndroidAdvancePushApp * package name of the current project
 * Open the project which is in use in Android Studio, and move to the App module (App Level) directory
 
 ---
-## Preparation for Push Notification
-### Set google-services.json File
 
 .center[
 ![設定ファイルダウンロード](readme-image-en/DownloadFile.png)
