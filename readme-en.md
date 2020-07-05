@@ -1428,6 +1428,10 @@ apply plugin: 'com.google.gms.google-services'
 <!--  NOTICE: Push received service will be insert here -->
 ```
 
+---
+## Preparation for Push Notification
+### Push Notification①：Set Reception of Push Notification
+
 ```
 <!--  NOTICE: Push received service will be insert here -->
 <service
