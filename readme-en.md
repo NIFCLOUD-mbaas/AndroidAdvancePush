@@ -1424,16 +1424,17 @@ apply plugin: 'com.google.gms.google-services'
 * Open AndroidManifest file and register service as an element of application tag.
 (Service provided by the default Android SDK)
 
-```text
-<!--  NOTICE: Push received service will be insert here -->
+```
+Comment: "NOTICE: Push received service will be insert here"
 ```
 
 ---
 ## Preparation for Push Notification
 ### Push Notification①：Set Reception of Push Notification
 
-```text
-<!--  NOTICE: Push received service will be insert here -->
+```
+Comment:  NOTICE: Push received service will be insert here
+
 <service
      android:name="com.nifcloud.mbaas.core.NCMBFirebaseMessagingService"
      android:exported="false">
