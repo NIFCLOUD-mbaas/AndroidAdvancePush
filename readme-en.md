@@ -940,12 +940,8 @@ holder.img.setImageBitmap(bmp);
 ```
 
 ---
-## Setting Shop Information
-### Filestore②：Shop image acquisition
 
 * Here is the code we are going to add
-
-
 ```java
 
 //**************** 【mBaaS/File②: acquire shop detail image】***************
@@ -1296,10 +1292,16 @@ layout: false
 * Use the Firebase Console to obtain the API key. Access to below address and log in with your Google account.
 https://console.firebase.google.com/
 * If you still have not a project, you need to create one.
+* Enter the project name in the Create Wizard, and set the Analytics feature valid or invalid as needed. (we don't plan to use the Analytics function during this Hands-on.)
+
+---
+
+## Preparation for Push Notification
+### Set Firebase Private Key to Mobile Backend
+
 .center[
 ![コード解説③](readme-image-en/Firebase_newproject.png)
 ]
-* Enter the project name in the Create Wizard, and set the Analytics feature valid or invalid as needed. (we don't plan to use the Analytics function during this Hands-on.)
 
 ---
 
@@ -1373,6 +1375,11 @@ https://console.firebase.google.com/
 * Enter the application ID in the [Android Package Name] field.</br>
 i.e.) com.nifcloud.AndroidAdvancePushApp * package name of the current project
 
+---
+
+## Preparation for Push Notification
+### Set google-services.json File
+
 .center[
 ![アプリ登録](readme-image-en/RegisterApp.png)
 ]
@@ -1384,6 +1391,11 @@ i.e.) com.nifcloud.AndroidAdvancePushApp * package name of the current project
 5. Add google-services.json
 * Click "Download google-services.json", and acquire Firebase Android configuration file（google-services.json）.
 * Open the project which is in use in Android Studio, and move to the App module (App Level) directory
+
+---
+## Preparation for Push Notification
+### Set google-services.json File
+
 .center[
 ![設定ファイルダウンロード](readme-image-en/DownloadFile.png)
 ]
@@ -1414,7 +1426,7 @@ apply plugin: 'com.google.gms.google-services'
 ### Push Notification①：Set Reception of Push Notification
 
 * Open AndroidManifest file and register service as an element of application tag.
-  (Service provided by the default Android SDK)
+(Service provided by the default Android SDK)
 
 ```
 <!--  NOTICE: Push received service will be insert here -->
@@ -1608,8 +1620,6 @@ try {
 ```
 
 ---
-## Deliver Push Notification：Segment Delivery
-### Push Notification④：Link User Information to installation
 
 * Installation information is rewritten each time the favorites information is updated on the Shop screen.
 * Add the following code.
@@ -1659,6 +1669,10 @@ Saving device information succeeded.
 
 * Once the device token has been successfully acquired, verify it on the mBaaS administration screen.
 
+---
+## Deliver Push Notification：Segment Delivery
+### Preparation for Operation Check
+
 .center[
 ![動作確認④デバイストークン](readme-image-en/installation_registered_mbaas.png)
 ]
@@ -1704,6 +1718,10 @@ Let's deliver push notifications by narrowing users who have has registered __sh
  * i.e.：ShopB Now on sale!
 * Check "Deliver to Android device".
 * Set "Target Devices"
+
+---
+## Deliver Push Notification：Segment Delivery
+### Operation Check(4)Segment Delivery
 
 .center[
 ![動作確認④セグメント1](readme-image-en/動作確認④セグメント1.png)
@@ -1852,6 +1870,11 @@ getIntent().removeExtra("com.nifcloud.mbaas.RichUrl");
 * Paste the copied public file URL into the URL field
 * Let's send it
 
+---
+## Deliver Push Notification：Rich Push
+### Operation Check(5)Rich Push
+
+
 .center[
 ![動作確認⑤リッチプッシュ](readme-image-en/動作確認⑤リッチプッシュ.png)
 ]
@@ -1880,11 +1903,11 @@ layout: false
 
 * Push notifications can contain arbitrary data in JSON format, and can receive and process that data when receiving notification.
 * Today, we are going to set the delivery time and data of message, and implement the content to display the local push in a timed manner.
- * Example of JSON-formatted data for push notifications setting
+* Example of JSON-formatted data for push notifications setting
 
- ```text
- {"deliveryTime":"2016-09-22 17:00:00", "message":"Time Sale Started!"}
- ```
+```text
+{"deliveryTime":"2016-09-22 17:00:00", "message":"Time Sale Started!"}
+```
 
 ---
 ## Deliver Push Notification：Payload
