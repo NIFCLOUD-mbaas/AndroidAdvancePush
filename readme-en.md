@@ -13,7 +13,7 @@ class: center, middle, inverse
 layout: false
 ## Preparation
 If you have not registered an account with NIFCLOUD mobile backend yet<br>
-[Service Site](https://mbaas.nifcloud.com/en/) Click the "Free Registration" button in the upper right corner<br>
+[Service Site](https://mbaas.nifcloud.com/en/) Click the "Sign up" button in the upper right corner<br>
 to register your account.
 
 ![mBaaS検索](readme-image-en/mBaaS無料登録.png)
@@ -25,10 +25,10 @@ Register with one of the following accounts
 - Registration with SNS ID（credit card payment）* Available for free
   - You can register with your SNS account login. Facebook, Twitter and Google are available.
   - Register from [Here](https://console.mbaas.nifcloud.com/signup)
-  - * It is recommended for the access from outside of Japan (Described on the next page)
+  - * It is recommended for the access from outside of Japan (Described in detail on the next page)
 - Registration with NIFCLOUD ID（Invoice payment) * For Expert plan or higher plan
   - You need to register NIFCLOUD ID first.
-  - Register from [Here](https://sso.nifcloud.com/auth/realms/nifcloud/protocol/openid-connect/registrations?client_id=user-registration&response_type=code&redirect_uri=%2Fcomp-registration.html&entry_code=N00000470100)
+  - Register from [Here](https://sso.nifcloud.com/auth/realms/nifcloud/protocol/openid-connect/registrations?client_id=user-registration&response_type=code&redirect_uri=%2Fcomp-registration.html&entry_code=N00000470100) (Japanese only)
 
 ---
 ## Preparation(Access from outside of Japan)
@@ -36,7 +36,7 @@ Register with one of the following accounts
 - English service site is here
 https://mbaas.nifcloud.com/en/
 - Control panel supports "Japanese, English, Chinese (Traditional)"
-- To change the language, please see below:
+- To change the language in Control panel, please do the following when you access to Control Panel
 ![mBaaS言語選択1](readme-image-en/language1.png)
 ![mBaaS言語選択2](readme-image-en/language2.png)
 
@@ -220,26 +220,28 @@ obj.saveInBackground(new DoneCallback() {
 ---
 ## Agenda for Hands-on
 
-__<font color="#49a7e5" size="5">Day 1&nbsp;</font><font size="6">Let's create"mBaaS Shop List" App!</font>__
+__<font color="#49a7e5" size="5">Day 1&nbsp;</font><font size="6">Let's create"mBaaS Shop List" App! (1h30)</font>__
 
 .size_large[
-1. Preparation for Hands-on
+1. Introduction and Preparation for Hands-on
 1. Create User Management function
-1. Setting Shop Information
 ]
 
-__<font color="#49a7e5" size="5">Day 2&nbsp;</font><font size="6">Let's prepare for Favorite features and push notifications!</font>__
+__<font color="#49a7e5" size="5">Day 2&nbsp;</font><font size="6">Let's prepare for Favorite features and push notifications! (3h)</font>__
 
 .size_large[
+1. Create User Management function (continued)
+1. Setting Shop Information
 1. Create a Favorites Feature
-1. Prepare Push Notifications
+1. Prepare Push Notifications (if time is available, FCM Settings)
 ]
 
 ---
 ## Agenda for Hands-on (continued)
 
-__<font color="#49a7e5" size="5">Day 3&nbsp;</font><font size="6">Let's deliver push notifications!</font>__
+__<font color="#49a7e5" size="5">Day 3&nbsp;</font><font size="6">Let's deliver push notifications! (3h)</font>__
 .size_large[
+1. Prepare Push Notifications (App Settings and Test)
 1. Deliver push notifications: Segment delivery
 1. Deliver push notification: Rich push
 1. Deliver push notification: Payload
@@ -661,6 +663,7 @@ NCMBUser.loginWithMailAddressInBackground(email, password, new LoginCallback());
 * As parameters, we receive email and password from the input form, and generate a request in the method to communicate to the server.
 When the result is returned from the server side, the pattern processing which is a normal/error judgment of NCMBException is performed in LoginCallback ().
 
+
 ---
 ## Create User Management Function
 ### User Management③：Update User Information
@@ -750,8 +753,48 @@ new AlertDialog.Builder(RegisterActivity.this)
 ### User Management③：Update User Information
 
 * Implementation of the Update User Information is now done.
-* Once we implemente the next step "Setting Shop Information", let's do operation check together.
-* Let's go on to the next step.
+* Now have a build and check.
+
+---
+## Create User Management Function
+### Operation check(2)Register Member Information
+
+* Build again with the simulator and check the operation.
+* Only for the first time log in, User information registration screen appears.
+* Enter some words/number, and tap "Register".
+ * Membership information is updated, so let's check the registered user information again on the administration screen of mBaaS.
+ Please make sure information is registered correctly.
+ * Please check the log.
+
+---
+## Create User Management Function
+### Operation check(2)Register Member Information
+
+.center[
+![動作確認②ユーザー情報追加](readme-image-en/動作確認②ユーザー情報追加.png)
+]
+.footnote[
+[Error code list](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
+]
+
+---
+## Create User Management Function
+### User Management③：Update User Information
+
+* Here we finished with the User Management functions.
+* Here is the end for Day1, if you have any questions, feel free to ask.
+* We will continue with Shop settings, Favorite Management on day2. And if we have enough time,
+we will prepare settings for Push Notifications.
+
+---
+layout: true
+class: center, middle, inverse_sub
+---
+# Setting Shop Information and Prepare for Favorites Function!
+
+.size_large[
+＜Day 2＞
+]
 
 ---
 layout: true
@@ -975,30 +1018,9 @@ try {
 
 ---
 ## Setting Shop Information
-### Operation check(2)Register Member Information and Diplay Shop Information
+### Operation check(2) Diplay Shop Information
 
 * Build again with the simulator and check the operation.
-* Only for the first time log in, User information registration screen appears.
-* Enter some words/number, and tap "Register".
- * Membership information is updated, so let's check the registered user information again on the administration screen of mBaaS.
- Please make sure information is registered correctly.
- * Please check the log.
-
----
-## Setting Shop Information
-### Operation check(2)Register Member Information and Diplay Shop Information
-
-.center[
-![動作確認②ユーザー情報追加](readme-image-en/動作確認②ユーザー情報追加.png)
-]
-.footnote[
-[Error code list](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
-]
-
----
-## Setting Shop Information
-### Operation check(2)Register Member Information and Diplay Shop Information
-
 * After the registration of user information (only appears at first time) is completed, the top screen of the App to be displayed. (The top screen will be directly displayed from the 2nd log in.)
 * "icon image", "Shop Name" and "Category" to be displayed on the top screen.
 * Select 1 Shop and tap it.
@@ -1008,7 +1030,7 @@ try {
 
 ---
 ## Setting Shop Information
-### Operation check(2)Register Member Information and Diplay Shop Information
+### Operation check(2) Diplay Shop Information
 
 .center[
 ![動作確認②](readme-image-en/動作確認②.png)
@@ -1019,7 +1041,7 @@ try {
 
 ---
 ## Setting Shop Information
-### About code(2)Register Member Information and Diplay Shop Information
+### About code(2)Diplay Shop Information
 
 * In order to display the list of shops, the Shop class data registered in the data store is searched and acquired.
 To search all data, the find() method provided by the NCMBQuery class is used as following.
@@ -1038,7 +1060,7 @@ please see[document](https://mbaas.nifcloud.com/doc/current/datastore/basic_usag
 
 ---
 ## Setting Shop Information
-### About code(2)Register Member Information and Diplay Shop Information
+### About code(2)Diplay Shop Information
 
 * To acquire the image in filestore, specify the file name and use fetchInBackground() to download the file
 when generate instance of NCMBFile as follows.
@@ -1048,17 +1070,11 @@ NCMBFile file = new NCMBFile(filename);
 file.fetchInBackground(new FetchFileCallback());
 ```
 
-* Here is the end for Day1.
-
 ---
 layout: true
 class: center, middle, inverse_sub
 ---
 # Prepare for Favorites Function and push Notification!
-
-.size_large[
-＜Day 2＞
-]
 
 ---
 layout: true
@@ -1267,11 +1283,18 @@ common.currentUser.put("favorite", list);
 common.currentUser.saveInBackground(new DoneCallback());
 ```
 
+* This is the end of Datastore, User Management and File Management part. We will continue with Push Notification part.
+
 ---
 layout: true
 class: center, middle, inverse
 ---
 # 1.Preparation for Push Notification
+
+.size_large[
+＜Day 3＞
+]
+
 
 ---
 layout: false
@@ -1489,17 +1512,12 @@ NCMB.initialize(this.getApplicationContext(),"APP_KEY","CLIENT_KEY");
 * Open "Push Notification" on mBaaS administration screen, and check the status of created push notification in the push notification list.
 * If it is succeded, "Delivered" is displayed.
 * If error occurs, please refer to the [document](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#%E3%80%8C%E9%85%8D%E4%BF%A1%E3%82%A8%E3%83%A9%E3%83%BC%E5%86%85%E5%AE%B9%E3%80%8D%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6) , and Review the settings.
-* This is the end of this seminar. Next time, we will learn how to take advantage of push notifications and practice them.
 
 ---
 layout: true
 class: center, middle, inverse_sub
 ---
 # Let's Deliver Push Notifications!【Practical Edition】
-
-.size_large[
-＜Day 3＞
-]
 
 ---
 layout: true
