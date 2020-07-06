@@ -227,13 +227,11 @@ __<font color="#49a7e5" size="5">Day 1&nbsp;</font><font size="6">Let's create"m
 1. Create User Management function
 ]
 
-__<font color="#49a7e5" size="5">Day 2&nbsp;</font><font size="6">Let's prepare for Favorite features and push notifications! (3h)</font>__
+__<font color="#49a7e5" size="5">Day 2&nbsp;</font><font size="6">Let's prepare for Favorite features! (3h)</font>__
 
 .size_large[
-1. Create User Management function (continued)
 1. Setting Shop Information
 1. Create a Favorites Feature
-1. Prepare Push Notifications (if time is available, FCM Settings)
 ]
 
 ---
@@ -241,7 +239,7 @@ __<font color="#49a7e5" size="5">Day 2&nbsp;</font><font size="6">Let's prepare 
 
 __<font color="#49a7e5" size="5">Day 3&nbsp;</font><font size="6">Let's deliver push notifications! (3h)</font>__
 .size_large[
-1. Prepare Push Notifications (App Settings and Test)
+1. Prepare Push Notifications
 1. Deliver push notifications: Segment delivery
 1. Deliver push notification: Rich push
 1. Deliver push notification: Payload
@@ -276,6 +274,11 @@ Click the link below to download a ZIP file▼<br>
 * Unzip the file.
 * Open the project you just downloaded in Android Studio.
 
+---
+layout: false
+## Preparation for Hands-on
+### Download project
+
 .center[
 ![mBaaS検索](readme-image-en/android1.png)
 ]
@@ -299,6 +302,11 @@ layout: false
 
 * Check the file structure of the project in Android Studio.
   - Please confirm that the processing files are included as shown below.
+
+---
+layout: false
+## Preparation for Hands-on
+### Preparation of project
 
 .center[
 ![AndroidStudio 4](readme-image-en/android4.png)
@@ -385,6 +393,8 @@ dependencies {
 
 * Pre-coding files is mainly as below
  * Create the design of App in the `files in the layout folder`, and to code the Action processing for each screen in an `Activity files`
+
+---
 
 .center[
 ![AndroidStudio 4](readme-image-en/android3.png)
