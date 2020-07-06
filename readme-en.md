@@ -2190,3 +2190,31 @@ Thank you very much for joining us. It would be great if you could tell us about
 * You can find code at [GitHub](https://github.com/NIFCLOUD-mbaas/AndroidAdvancePush)
  * __master__：Full version
  * __handson__：Seminar version
+
+---
+## About master project (1)
+
+* If you want to test step by step using Master project, notice the following
+* To test the following features in: Let's create "mBaaS Shop List" App!(day 1) and Let's prepare for Favorite features! (day 2), comment out the following line in app/build.gradle files
+
+```
+apply plugin: 'com.google.gms.google-services'
+```
+->
+```
+//apply plugin: 'com.google.gms.google-services'
+```
+* Remember to change YOUR_APPLICATION_KEY, YOUR_CLIENT_KEY
+
+---
+## About master project (2)
+
+* In Push Notification preparation part and to test other push notification features, after copy google-services.json to Project, remove the comment out code // from the line.
+
+```
+//apply plugin: 'com.google.gms.google-services'
+```
+->
+```
+apply plugin: 'com.google.gms.google-services'
+```
