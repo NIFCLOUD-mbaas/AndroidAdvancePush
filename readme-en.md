@@ -2181,7 +2181,7 @@ layout: false
 
 Thank you very much for joining us. It would be great if you could tell us about NIFCLOUD mobile backend through questionnaire.
 
-<<Survey URL>>
+Click [here](https://docs.google.com/forms/d/e/1FAIpQLSfCeg47P-PU0hMgX57q15t-PTBFJEJIPJrDfHkWxMWj269vzA/viewform)
 ---
 ## Reference
 
