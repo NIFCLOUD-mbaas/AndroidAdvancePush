@@ -1606,11 +1606,10 @@ startActivityForResult(intent, REQUEST_RESULT );
 
 ```
 
----
-##  Deliver Push Notification：Segment Delivery
-### Push Notification③：Link User Information to installation
-
 * Installation information is rewritten each time the favorites information is updated on the Favorites screen.
+
+---
+
 * Add the following code.
 
 ```java
@@ -2117,6 +2116,10 @@ Acquired payload!
 
 * Close the App
 * Re-create Push Notification
+
+---
+## Deliver Push Notification：Payload
+### Operation Check(6)Payload（When the App is NOT activated）
 
 .center[
 ![動作確認⑥ペイロード2](readme-image-en/動作確認⑥ペイロード2.png)
