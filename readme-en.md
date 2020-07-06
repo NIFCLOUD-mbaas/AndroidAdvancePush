@@ -472,6 +472,11 @@ In this hands-on, we will use "Email Address/Password Authentication" function.
 ```java
 //**************** 【mBaaS/User①】: Request a Membership Registration email】***************
 ```
+
+---
+## Create User Management function
+### User Management①：Request a membership registration email
+
 * For member registration process, please add the implementation code as follows
 ```java
 //**************** 【mBaaS/User①】: Request a Membership Registration email】***************
