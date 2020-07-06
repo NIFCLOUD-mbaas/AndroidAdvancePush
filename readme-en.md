@@ -851,8 +851,6 @@ Here you can see how it is imported.
 ]
 
 ---
-## Setting Shop Information
-### Prepare Shop information in mBaaS (Filestore)
 
 * Here you can see how it is uploaded.
 
