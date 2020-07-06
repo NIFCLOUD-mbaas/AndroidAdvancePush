@@ -59,6 +59,7 @@ public class LoginActivity extends AppCompatActivity {
 
     protected void doLogin() {
         //**************** 【mBaaS/User②】: メールアドレスとパスワードでログイン】***************
+        //**************** 【mBaaS/User②】: Login with email address and password】***************
 
 
     }

@@ -79,6 +79,7 @@ public class ShopListAdapter extends BaseAdapter{
         String filename = tmpObj.getString("icon_image");
 
         //**************** 【mBaaS/File①: ショップ画像を取得】***************
+        //**************** 【mBaaS/File①: shop image acquisition】***************
 
 
 
