@@ -381,9 +381,12 @@ dependencies {
 ## Preparation for Hands-on
 ### What is already done for the project
 
-* Coding of processes other than linkage with mBaaS
- * Create the design of App in the `file in the layout folder`, and to code the processing for each screen in an `Activity file`
+* Pre-coding files is mainly as below
+ * Create the design of App in the `files in the layout folder`, and to code the Action processing for each screen in an `Activity files`
 
+.center[
+![AndroidStudio 4](readme-image-en/android3.png)
+]
 
 ---
 ## Preparation for Hands-on
@@ -1886,6 +1889,7 @@ getIntent().removeExtra("com.nifcloud.mbaas.RichUrl");
 
 * After a while, you will receive a push notification.
 * When you open the push notification, WebView screen appears and the public file is displayed.
+* Notice that if you are not logged in, you need to login first.
 
 .center[
 ![動作確認⑤リッチプッシュ2](readme-image-en/動作確認⑤リッチプッシュ2.png)
