@@ -1422,7 +1422,7 @@ i.e.) com.nifcloud.AndroidAdvancePushApp * package name of the current project
 
 5. Add google-services.json
 * Click "Download google-services.json", and acquire Firebase Android configuration file（google-services.json）.
-* Open the project which is in use in Android Studio, and move to the App module (App Level) directory
+* Open the project which is being used in Android Studio, and move to the App module (App Level) directory.
 
 ---
 
@@ -1518,7 +1518,7 @@ NCMB.initialize(this.getApplicationContext(),"APP_KEY","CLIENT_KEY");
 
 * Confirm that the delivery icon is displayed on the device.
 * Open "Push Notification" on mBaaS administration screen, and check the status of created push notification in the push notification list.
-* If it is succeded, "Delivered" is displayed.
+* If it is succeeded, "Delivered" is displayed.
 * If error occurs, please refer to the [document](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#%E3%80%8C%E9%85%8D%E4%BF%A1%E3%82%A8%E3%83%A9%E3%83%BC%E5%86%85%E5%AE%B9%E3%80%8D%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6) , and Review the settings.
 
 ---
@@ -2100,7 +2100,7 @@ Saving device information succeeded.
 ### Operation Check(6)Payload（When the App is activated）
 
 * Deliver Push Notification
-* Next comming log is displayed when push notification is received(silent)
+* The following log is displayed when push notification is received(silent)
 
 ```text
 Acquired payload!
