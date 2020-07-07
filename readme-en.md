@@ -268,8 +268,15 @@ layout: false
 
 Click the link below to download a ZIP file▼<br>
 .size_medium[
-　　　 __[AndroidAdvancePush](https://github.com/NIFCLOUD-mbaas/AndroidAdvancePush/archive/handson.zip)__
+　　　 __[AndroidAdvancePush (Handson version)](https://github.com/NIFCLOUD-mbaas/AndroidAdvancePush/archive/handson.zip)__
 ]
+
+For short version of seminar, please download the following ZIP file instead.
+
+.size_medium[
+　　　 __[AndroidAdvancePush (Full code)](https://github.com/NIFCLOUD-mbaas/AndroidAdvancePush/archive/master.zip)__
+]
+(Check notice notes at the end of the slide about Full code version.)
 
 * Unzip the file.
 * Open the project you just downloaded in Android Studio.
