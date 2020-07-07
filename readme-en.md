@@ -2,7 +2,7 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
-# <span style="font-size: 30%">【Android編】ニフクラmobile backend レベルアップセミナー</span><br>__クーポン配信アプリ<br>を作ろう！__</span>
+# <span style="font-size: 30%">【Android version】NIFCLOUD Mobile Backend Level-up Seminar</span><br>__Let's Create<br>a Coupon Delivery App!__</span>
 
 @ncmbadmin
 
@@ -11,171 +11,172 @@ class: center, middle, inverse
 ]
 ---
 layout: false
-## 事前準備
-ニフクラmobile backendのアカウント登録がお済みでない方は、<br>
-[ホームページ](https://mbaas.nifcloud.com/about.htm)右上にある「無料登録」ボタンをクリックして、<br>
-アカウント登録を実施してください
+## Preparation
+If you have not registered an account with NIFCLOUD mobile backend yet<br>
+[Service Site](https://mbaas.nifcloud.com/en/) Click the "Sign up" button in the upper right corner<br>
+to register your account.
 
-![mBaaS検索](readme-image/mBaaS検索.png)
-
-![mBaaS検索](readme-image/mBaaS無料登録.png)
+![mBaaS検索](readme-image-en/mBaaS無料登録.png)
 
 
 ---
-## 事前準備
-登録について以下のどちらかのアカウントで登録を行ってください
-- SNS ID（クレジットカード払い）の登録　※無料から利用可能
-  - お持ちのSNSアカウントログインで、登録することができます。対応するSNSアカウントはFacebook、Twitter、Googleです。
-  - 登録は[こちら](https://console.mbaas.nifcloud.com/signup)
-  - ※海外からの利用はこちらの登録方法をオススメいたします。（次のページで説明）
-- ニフクラID（請求書払い）として登録　※Expertプラン以上
-  - 先にニフクラIDを取得することが必要です。
-  - 登録は[こちら](https://sso.nifcloud.com/auth/realms/nifcloud/protocol/openid-connect/registrations?client_id=user-registration&response_type=code&redirect_uri=%2Fcomp-registration.html&entry_code=N00000470100)
+## Preparation
+Register with one of the following accounts
+- Registration with SNS ID（credit card payment）* Available for free
+  - You can register with your SNS account login. Facebook, Twitter and Google are available.
+  - Register from [Here](https://console.mbaas.nifcloud.com/signup)
+  - * It is recommended for the access from outside of Japan (Described in detail on the next page)
+- Registration with NIFCLOUD ID（Invoice payment) * For Expert plan or higher plan
+  - You need to register NIFCLOUD ID first.
+  - Register from [Here](https://sso.nifcloud.com/auth/realms/nifcloud/protocol/openid-connect/registrations?client_id=user-registration&response_type=code&redirect_uri=%2Fcomp-registration.html&entry_code=N00000470100) (Japanese only)
 
 ---
-## 事前準備（海外からの利用案内）
+## Preparation(Access from outside of Japan)
 
-- サービスの英語サイトはこちらとなっています
+- English service site is here
 https://mbaas.nifcloud.com/en/
-- 管理画面は「日本語・英語・中文」の言語を対応しております。
-- 言語を表示する際、以下のように行ってください。
-![mBaaS言語選択1](readme-image/language1.png)
-![mBaaS言語選択2](readme-image/language2.png)
+- Control panel supports "Japanese, English, Chinese (Traditional)"
+- To change the language in Control panel, please do the following when you access to Control Panel
+![mBaaS言語選択1](readme-image-en/language1.png)
+![mBaaS言語選択2](readme-image-en/language2.png)
 
 
 ---
-## 動作環境
+## Operating Environment
+
+This Seminar project is prepared for the following environment
 * Android Studio ver3.6.1
-* Android OS ver.9 (実機)
+* Android OS ver.9 (Real machine)
+* NIFCLOUD mobile backend Android SDK ver.3.0.4
 
 ---
-## 今回のハンズオンセミナーについて
-### セミナーの形式
+## About this Hands-on Seminar
+### Format of the Seminar
 
-- ３回分けて機能を実施していきます。
-- 講義形式で説明と演習を繰り返してアプリを作成します
-- 途中で動作確認タイムと休憩タイムで全体進捗を確認します
-- 質疑応答は随時行います
-
----
-## ハンズオンの概要
-### 作成するアプリについて
-
-* クーポン配信アプリをイメージした「mBaaS Shop List」アプリの作成を通して、mBaaSの機能を理解していきます
-* mBaaSの連携部分をコーディングし、アプリを完成させ、次の内容を実現していきます
- * 会員登録をするとお店情報を見ることができます
- * お店のお気に入り登録ができ、お気に入り登録をしたお店からプッシュ通知で届きます
- * 性別や都道府県限定のプッシュ通知ができます
- * お店からのプッシュ通知でクーポンを直接配信することができます
- * 決まった時間に通知を出すようにプッシュ通知を仕掛けることができます
+- We will implement functions in 3 steps.
+- Create an App in lecture style by repeating instructions and exercises.
+- Whole progress will be chekced by taking the operation check time and break time.
+- Q&A time will be held at any time.
+- We have translated the materials as much as possible.
+However, some App screen, control panel and function name are still in Japanese.
+We will supplementary explain for those, but we appreciated your understanding in advance.
 
 ---
-## ハンズオンの概要
-### 作成するアプリについて
+## Hands-on Overview
+### About the App to create
+
+* Understand the function of mBaaS by creating a App "mBaaS Shop List" a kind of coupon delivery App.
+* Code the mBaaS integration to complete the App, and realize:
+ * After registration to become member, App users can see shop information.
+ * App users can register favorite stores and receive push notifications from those stores.
+ * Push notifications can be sent selectively by gender or Region.
+ * Coupon can be directly delivered through push notification from the store.
+ * Push notifications can be automatically sent at a fixed time.
+
+---
+## Hands-on Overview
+### About App to create
 
 .center[
-![mBaaS_shop_List](readme-image/mBaaS_shop_List.png)
+![mBaaS_shop_List](readme-image-en/mBaaS_shop_List.png)
 ]
 
 ---
-## ニフクラ mobile backendとは
-### サービス紹介
+## What is NIFCLOUD mobile backend?
+### Service Introduction
 
-* スマホアプリで汎用的に実装される機能を、クラウドサービスとして提供しているサービスです
- * 通称「mBaaS」と呼びます
-* 対応機能一覧はこちらです。
+* This service is a Cloud service that provides functions that are commonly implemented in smartphone App.
+ * Commonly called "mBaaS"
+* Here are the list of functions.
 
 .center[
-![mBaaS紹介](readme-image/mBaaS紹介.png)
+![mBaaS紹介](readme-image-en/mBaaS紹介.png)
 ]
 
 ---
-## 今回のハンズオンセミナーについて
-### 学ぶ内容：データストア機能活用
+## About this Hands-on Seminar
+### Contents：How to Use Datastore Function
 
-「mBaaS Shop List」アプリの作成を通して、お店の情報、お気に入り情報を
-データストア機能を利用して、データ登録、表示、管理を行います。
-これらの機能は会員機能を用いて実装を行います。
-
----
-## 今回のハンズオンセミナーについて
-### 学ぶ内容：会員管理機能活用
-
-「mBaaS Shop List」アプリの作成を通して、ユーザログイン、ログアウトの実装、
-ユーザと紐づいて、お気に入り登録、表示、管理を行います。これらの機能は会員機能を用いて
-実装を行います。
-
-## 今回のハンズオンセミナーについて
-### 学ぶ内容：ファイルストア機能活用
-
-「mBaaS Shop List」アプリの作成を通して、お店の表示する画像、セール情報のPR画像の管理は
-ファイルストアで行います。
+Through the creation of "mBaaS Shop List" App, we will register, display and manage
+the data of shop information and user's favorites information using the Datastore Management function.
 
 ---
-## 今回のハンズオンセミナーについて
-### 学ぶ内容：プッシュ通知応用①
+## About this Hands-on Seminar
+### Contents：How to Use User Management Function
 
-「mBaaS Shop List」アプリの作成を通して、アクティブユーザー率を上げる<br>
-効率的なプッシュ通知の組み込み方を学びます
+Through the creation of "mBaaS Shop List" App, user login and logout to be implemented,
+and users linked favorites information to be registered, displayed and managed.
+These functions to be implemented using the User Management function
+---
+## About this Hands-on Seminar
+### Contents：How to Use Filestore Function
+
+Through the creation of "mBaaS Shop List" App, the image displayed by the shop and PR image of the sale information
+to be managed using Filestore.
+
+---
+## About this Hands-on Seminar
+### Contents: Practice Push Notification①
+
+Through the creation of "mBaaS Shop List" App, we understand how to build<br>
+effective push notifications that increase active user rate.
 
 .center[
-![セグメント配信](readme-image/seminar/セグメント配信.png)
+![セグメント配信](readme-image-en/seminar/セグメント配信.png)
 ]
 
 ---
-## 今回のハンズオンセミナーについて
-### 学ぶ内容：プッシュ通知応用②
+## About this Hands-on Seminar
+### Contents：Practice Push Notification②
 
-「mBaaS Shop List」アプリの作成を通して、アクティブユーザー率を上げる<br>
-効率的なプッシュ通知の組み込み方を学びます<br>
+Through the creation of "mBaaS Shop List" App, we understand how to build<br>
+effective push notifications that increases active user rate.<br>
 
 .center[
-![リッチプッシュ](readme-image/seminar/リッチプッシュ.png)
+![リッチプッシュ](readme-image-en/seminar/リッチプッシュ.png)
 ]
 
 ---
-## 今回のハンズオンセミナーについて
-### 学ぶ内容：プッシュ通知応用③
+## About this Hands-on Seminar
+### Contents：Practice Push notification③
 
-「mBaaS Shop List」アプリの作成を通して、アクティブユーザー率を上げる<br>
-効率的なプッシュ通知の組み込み方を学びます<br><br>
+Through the creation of "mBaaS Shop List" App, we understand how to build<br>
+effective push notifications that increases active user rate.<br><br>
 
 .center[
-![ペイロード](readme-image/seminar/ペイロード.png)
+![ペイロード](readme-image-en/seminar/ペイロード.png)
 ]
 
-
-
 ---
-## ニフクラ mobile backendとは
-### Android SDKの特徴
+## What is NIFCLOUD mobile backend?
+### Android SDK Features
 
-* SDKのインストールが必要です
- * 今回は実装済み
- * 参考：[クイックスタート](https://mbaas.nifcloud.com/doc/current/introduction/quickstart_android.html)
-* SDKの初期化処理が必要です
- * MainActivity.javaの冒頭に次のコードを追記して、インストールしたSDKを読み込みます
+* You need to install SDK
+ * Already implemented this time
+ * Reference：[Quick Start](https://mbaas.nifcloud.com/doc/current/introduction/quickstart_android.html)
+* SDK initialization process is required
+ * Please add the following code at the beginning of MainActivity.java to load installed SDK.
 
- ```java
+```java
 import com.nifcloud.mbaas.core.NCMB;
 ```
 
- * アプリの初期化はこちらになります。
+ * Initialize the App
 
 ```java
 NCMB.initialize(this.getApplicationContext(),"YOUR_APPLICATION_KEY","YOUR_YOUR_CLIENT_KEY");
 ```
 
 ---
-## ニフクラ mobile backendとは
-### Android SDKの特徴
+## What is NIFCLOUD mobile backend?
+### Android SDK Features
 
-* サーバへリクエスト処理には、__同期処理__ と __非同期処理__ があります
+* Processing methods when making requests to the server include __synchronous processing__ and __asynchronous processing__
 
 ```java
 
-// 例）保存の場合
-/* 同期処理 */
+// i.e.）To Save
+/* synchronous processing */
 
 NCMBObject obj = new NCMBObject("SaveObjectTest");
 obj.put("key", "value");
@@ -184,13 +185,13 @@ obj.save();
 ```
 
 ---
-## ニフクラ mobile backendとは
-### Android SDKの特徴
+## What is NIFCLOUD mobile backend?
+### Android SDK Features
 
-* サーバへリクエスト処理には、__同期処理__ と __非同期処理__ があります
+* Processing methods when making requests to the server include　__synchronous processing__ and __asynchronous processing__
 
 ```java
-/* 非同期処理 */
+/* asynchronous processing */
 
 NCMBObject obj = new NCMBObject("SaveObjectTest");
 obj.put("key", "value");
@@ -198,199 +199,315 @@ obj.saveInBackground(new DoneCallback() {
     @Override
     public void done(NCMBException e) {
         if (e != null) {
-            //エラー発生時の処理
+            //Processing when an error occurs
         } else {
-            //成功時の処理
+            //Processing on success
         }
     }
 });
 
 ```
 
-* 同期処理と非同期処理
- * 同期処理はその処理が完了するまで、次の処理が実行されません
- * 非同期処理はバックグラウンドで処理を実行し、次の処理を実行します DoneCallback()にて処理後の実装を事前に指定できます
+---
+## What is NIFCLOUD mobile backend?
+### Android SDK Features
+
+* synchronous processing and asynchronous processing
+ * The synchronous processing does not perform next process until its synchronous processing completion:
+ * Asynchronous process executes the process in the background and executes the next process. You can specify in advance with DoneCallback() the implementation after processing:
 
 
 ---
-## ハンズオンの流れ
+## Agenda for Hands-on
 
-__<font color="#49a7e5" size="5">前半&nbsp;</font><font size="6">「mBaaS Shop List」アプリを作ろう！</font>__
+__<font color="#49a7e5" size="5">Day 1&nbsp;</font><font size="6">Let's create"mBaaS Shop List" App! (1h30)</font>__
 
 .size_large[
-1. ハンズオンの準備
-1. 会員管理機能の作成
-1. Shop情報の設定
+1. Introduction and Preparation for Hands-on
+1. Create User Management function
 ]
 
-__<font color="#49a7e5" size="5">前半&nbsp;</font><font size="6">「mBaaS Shop List」アプリ、お気に入りとプッシュ通知準備！</font>__
+__<font color="#49a7e5" size="5">Day 2&nbsp;</font><font size="6">Let's prepare for Favorite features! (3h)</font>__
 
 .size_large[
-1. お気に入り機能の作成
-1. プッシュ通知の準備
+1. Setting Shop Information
+1. Create a Favorites Feature
 ]
 
-__<font color="#49a7e5" size="5">後半&nbsp;</font><font size="6">プッシュ通知を送ろう！</font>__
+---
+## Agenda for Hands-on (continued)
+
+__<font color="#49a7e5" size="5">Day 3&nbsp;</font><font size="6">Let's deliver push notifications! (3h)</font>__
 .size_large[
-1. プッシュ通知を送信：セグメント配信
-1. プッシュ通知を送信：リッチプッシュ
-1. プッシュ通知を送信：ペイロード
+1. Prepare Push Notifications
+1. Deliver push notifications: Segment delivery
+1. Deliver push notification: Rich push
+1. Deliver push notification: Payload
 ]
 
 ---
 layout: true
 class: center, middle, inverse_sub
 ---
-#「mBaaS Shop List」<br>アプリを作ろう！
+#Let's create <br>"mBaaS Shop List" App!
 
 .size_large[
-＜第1回＞
+＜Day 1＞
 ]
 
 ---
 layout: true
 class: center, middle, inverse
 ---
-# 1.ハンズオンの準備
+# 1.Preparation for Hands-on
 
 ---
 layout: false
-## ハンズオンの準備
-### プロジェクトをダウンロード
+## Preparation for Hands-on
+### Download project
 
-下記リンクをクリックして、ZIPファイルでダウンロードしてください▼<br>
+Click the link below to download a ZIP file▼<br>
 .size_medium[
-　　　 __[AndroidAdvancePush](https://github.com/NIFCLOUD-mbaas/AndroidAdvancePush/archive/handson.zip)__
+　　　 __[AndroidAdvancePush (Handson version)](https://github.com/NIFCLOUD-mbaas/AndroidAdvancePush/archive/handson.zip)__
 ]
 
-* zipファイルを展開します。
-* AndroidStudioで先ほどダウンロードしたプロジェクトを開いてください。
+For short version of seminar, please download the following ZIP file instead.
+
+.size_medium[
+　　　 __[AndroidAdvancePush (Full code)](https://github.com/NIFCLOUD-mbaas/AndroidAdvancePush/archive/master.zip)__
+]
+(Check notice notes at the end of the slide about Full code version.)
+
+* Unzip the file.
+* Open the project you just downloaded in Android Studio.
+
+---
+layout: false
+## Preparation for Hands-on
+### Download project
 
 .center[
-![mBaaS検索](readme-image/android1.png)
+![mBaaS検索](readme-image-en/android1.png)
 ]
 
 ---
 layout: false
-## ハンズオンの準備
-### プロジェクトを準備
+## Preparation for Hands-on
+### Preparation for project
 
-* AndroidStudioでプロジェクトのビューを調整します。
-  - 左上のビューオプション項目で[Android]を選択します。
+* Adjust the view of your project in Android Studio.
+  - Select [Android] in the view options item on the upper left.
 
 .center[
-![AndroidStudio 2](readme-image/android2.png)
+![AndroidStudio 2](readme-image-en/android2.png)
 ]
 
 ---
 layout: false
-## ハンズオンの準備
-### プロジェクトを準備
+## Preparation for Hands-on
+### Preparation of project
 
-* AndroidStudioでプロジェクトのファイル構成を確認します。
-  - 以下のように処理のファイルが入っていることをご確認ください。
+* Check the file structure of the project in Android Studio.
+  - Please confirm that the processing files are included as shown below.
+
+---
+layout: false
+## Preparation for Hands-on
+### Preparation of project
 
 .center[
-![AndroidStudio 4](readme-image/android4.png)
+![AndroidStudio 4](readme-image-en/android4.png)
 ]
 
 ---
-## ハンズオンの準備
-### プロジェクトにあらかじめ実施していること
+## Preparation for Hands-on
+### What is already done for the project
 
-* mBaaS Android SDK v.3.0.4のインストール, build.graddleの設定, AndroidManifestの設定は実装済み
-* mBaaSとの連携以外の処理のコーディング
- * アプリのデザインを`layoutフォルダー内ファイル`で作成し、処理は画面ごと`Activityのファイル`にコーディングしています
+* mBaaS Android SDK v.3.0.4 installation, build.graddle setting, AndroidManifest setting already implemented
+* build.gradle
+
+```text
+buildscript {
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+```
 
 ---
-## ハンズオンの準備
-### mBaaSの準備
+## Preparation for Hands-on
+### What is already done for the project
 
-* [mBaaS](https://mbaas.nifcloud.com)にログインしてアプリを作成します
 
-![mBaaSアプリ作成](readme-image/mBaaSアプリ作成.png)
+* app/build.gradle
+
+```
+repositories {
+    maven {
+        url 'https://maven.google.com'
+    }
+}
+```
+
+```
+dependencies {
+    implementation 'com.google.code.gson:gson:2.3.1'
+    <<Abbreviation>>
+    api files('libs/NCMB.jar')
+}
+```
 
 ---
-## ハンズオンの準備
-### APIキーの設定とSDKの初期化
+## Preparation for Hands-on
+### What is already done for the project
 
-* `MainActivity.java`を開きます
-* `onCreate()`メソッド内に処理を実装します[一部実装済み]
+* AndroidManifest.xml
+
+```
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+<<Abbreviation>>
+
+<activity
+    android:name=".MainActivity"
+    android:label="@string/app_name"
+    android:theme="@style/AppTheme.NoActionBar" >
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>
+<activity android:name=".LoginActivity" />
+<activity android:name=".SignupActivity" />
+<activity android:name=".RegisterActivity" />
+<activity android:name=".ShopActivity" />
+<activity android:name=".FavoriteActivity" />
+<activity android:name=".InfoActivity" />
+
+```
+
+---
+## Preparation for Hands-on
+### What is already done for the project
+
+* Pre-coding files is mainly as below
+ * Create the design of App in the `files in the layout folder`, and to code the Action processing for each screen in an `Activity files`
+
+---
+
+.center[
+![AndroidStudio 4](readme-image-en/android3.png)
+]
+
+---
+## Preparation for Hands-on
+### Preparation of mBaaS
+
+* Login to [mBaaS](https://console.mbaas.nifcloud.com/) to create the App
+* On the App creation screen, enter the App name and click "+ New App"
+* If the App is created successfully, the "application key" and "client key" (API key) of the new App will be displayed.
+Make a note of them by copy and paste as we will use them later.
+
+![mBaaSアプリ作成](readme-image-en/mBaaSアプリ作成.png)
+
+---
+## Preparation for Hands-on
+### API key setting and SDK initialization
+
+* Open the `MainActivity.java`
+* Add in the `onCreate()` method following process below the comment[Library import processing is already implemented]
 
 ```java
-//**************** 【mBaaS/Initialization: APIキーを指定する】***************
+//**************** 【mBaaS/Initialization: Specify API key】***************
 NCMB.initialize(this.getApplicationContext(),"YOUR_APPLICATION_KEY","YOUR_CLIENT_KEY");
 ```
 
 ---
-## ハンズオンの準備
-### APIキーの設定とSDKの初期化
+## Preparation for Hands-on
+### API key setting and SDK initialization
 
-* 初期化処理の「`YOUR_APPLICATION_KEY`」，「`YOUR_CLIENT_KEY`」の部分をアプリ作成時に発行されたAPIキーに書き換えてください
- * APIキーは、mBaaSのダッシュボードから「アプリ設定」→「基本」にあります
+* Please replace the "`YOUR_APPLICATION_KEY`" and "`YOUR_CLIENT_KEY`" parts of the initialization process to the API key issued when the App was created.
+ * If you haven't made a note before, you can find API keys again from the mBaaS management screen in "App Settings" → "Basic"
 
 .center[
-![mBaaSアプリキー設定](readme-image/apikey.png)
+![mBaaSアプリキー設定](readme-image-en/apikey.png)
 ]
 
 ---
 layout: true
 class: center, middle, inverse
 ---
-# 2.会員管理機能の作成
+# 2.Create User Management function
 
 ---
 layout: false
-## 会員管理機能の作成
-### mBaaSの設定
+## Create User Management function
+### mBaaS settings
 
-* 会員管理設定の「メールアドレス/パスワード認証」を許可します
+* mBaaS has "ID/Password Authentication" and "Email Address/Password Authentication" as User Management function.
+In this hands-on, we will use "Email Address/Password Authentication" function.
+* Allow "Email Address/Password Authentication" in User Authentication Settings.
 
 .center[
-![mBaaS会員設定](readme-image/mBaaS会員設定.png)
+![mBaaS会員設定](readme-image-en/mBaaS会員設定.png)
 ]
 
 
 ---
-## 会員管理機能の作成
+## Create User Management Function
 
-### 会員管理①：会員登録用メールを要求する[実装済み]
+### User Management①：Request a Membership Registration email
 
 .center[
-![SignUpViewController](readme-image/SignUpViewController.png)
+![SignUpViewController](readme-image-en/SignUpViewController.png)
 ]
 
 ---
-## 会員管理機能の作成
-### 会員管理①：会員登録用メールを要求する[実装済み]
+## Create User Management function
+### User Management①：Request a membership registration email
 
-* `SignupActivity.java`を開きます
-* `doSignupByEmail()`メソッドを開きます
-* 会員登録処理は以下のように実装されます
-
+* Open `SignupActivity.java`.
+* Open `doSignupByEmail()`method. Open the place where the following comment is written.
 ```java
-//**************** 【mBaaS/User①】: 会員登録用メールを要求する】***************
+//**************** 【mBaaS/User①】: Request a Membership Registration email】***************
+```
+
+---
+## Create User Management function
+### User Management①：Request a membership registration email
+
+* For member registration process, please add the implementation code as follows
+```java
+//**************** 【mBaaS/User①】: Request a Membership Registration email】***************
 String email = _signupEmail.getText().toString();
 NCMBUser.requestAuthenticationMailInBackground(email, new DoneCallback() {
      @Override
      public void done(NCMBException e) {
          if (e != null) {
-             // 会員登録用メールの要求失敗時の処理
+             // process for failed requests for membership registration mail
          } else {
-             // 会員登録用メールの要求成功時の処理
+             // process for successful request of member registration mail
          }
      }
  });
 ```
 
 ---
-## 会員管理機能の作成
-### 会員管理①：会員登録用メールを要求する[実装済み]
+## Create User Management function
+### User Management①：Request a membership registration email[Already implemented]
 
-* それぞれ処理を追記しています
+* Please add each processing
 
 ```java
-// 会員登録用メールの要求失敗時の処理
+// process for failed requests for membership registration mail
 new AlertDialog.Builder(SignupActivity.this)
         .setTitle("Notification from NIFCLOUD")
         .setMessage("Send failed! Error:" + e.getMessage())
@@ -399,13 +516,13 @@ new AlertDialog.Builder(SignupActivity.this)
 ```
 
 ```java
-// 会員登録用メールの要求成功時の処理
+// process for successful request of member registration mail
 new AlertDialog.Builder(SignupActivity.this)
         .setTitle("Notification from NIFCLOUD")
-        .setMessage("メール送信完了しました! メールをご確認ください。")
+        .setMessage("Mail delivery completed! Please check email.")
         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                //Login画面遷移します
+                //Login screen transition
                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivityForResult(intent, REQUEST_RESULT);
             }
@@ -413,23 +530,31 @@ new AlertDialog.Builder(SignupActivity.this)
         .show();
 ```
 ---
-## 会員管理機能の作成
-### 会員管理②：メールアドレスとパスワードでログイン<br>[実装済み]
+## Create User Management Function
+### User Management②：Login with email address and password
 
 .center[
-![LoginViewController](readme-image/LoginViewController.png)
+![LoginViewController](readme-image-en/LoginViewController.png)
 ]
 
 ---
-## 会員管理機能の作成
-### 会員管理②：メールアドレスとパスワードでログイン<br>[実装済み]
-
-* `LoginActivity.java`を開きます
-* `doLogin()`メソッドを開きます
-* ログイン処理は以下のように実装されます
+## Create User Management Function
+### User Management②：Login with email address and password
+* Open `LoginActivity.java`.
+* Open `doLogin()` method. Open the following comment.
 
 ```java
-//**************** 【mBaaS/User②】: メールアドレスとパスワードでログイン】***************
+//**************** 【mBaaS/User②】: Login with email address and password】***************
+```
+
+---
+## Create User Management Function
+### User Management②：Login with email address and password
+
+* Please add the login process as follows.
+
+```java
+//**************** 【mBaaS/User②】: Login with email address and password】***************
 String email = _loginEmail.getText().toString();
 String password = _loginPassword.getText().toString();
 
@@ -437,22 +562,22 @@ NCMBUser.loginWithMailAddressInBackground(email, password, new LoginCallback() {
     @Override
     public void done(NCMBUser user, NCMBException e) {
         if (e != null) {
-            //ログインに失敗した場合の処理
+            //process for log in failures
         } else {
-            //ログインに成功した場合の処理
+            //process for successful login
         }
     }
 });
 ```
 
 ---
-## 会員管理機能の作成
-### 会員管理②：メールアドレスとパスワードでログイン<br>[実装済み]
+## Create User Management Function
+### User Management②：Login with email address and password
 
-* それぞれ処理を追記しています
+* Please add each processing
 
 ```java
-//ログインに失敗した場合の処理
+//process for log in failures
 new AlertDialog.Builder(LoginActivity.this)
         .setTitle("Notification from NIFCLOUD")
         .setMessage("Login failed! Error:" + e.getMessage())
@@ -461,28 +586,29 @@ new AlertDialog.Builder(LoginActivity.this)
 ```
 
 ---
-## 会員管理機能の作成
-### 会員管理②：メールアドレスとパスワードでログイン<br>[実装済み]
+### User Management②：Login with email address and password
 
-* それぞれ処理を追記しています（続き）
+* Please add each processing (continued)
 
 ```java
-//ログインに成功した場合の処理
+//process for successful login
 common.currentUser = NCMBUser.getCurrentUser();
 AlertDialog show = new AlertDialog.Builder(LoginActivity.this)
         .setTitle("Notification from NIFCLOUD")
-        .setMessage("ログイン成功")
+        .setMessage("Login Succeeded")
         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 String nickname = common.currentUser.getString("nickname");
                 if (nickname != null && !nickname.isEmpty() && !nickname.equals("null")) {
-                    //メイン画面遷移します
+                    //main screen transition
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivityForResult(intent, REQUEST_RESULT);
                 } else {
-                    //初期ログイン会員登録画面遷移します
-                    Toast.makeText(LoginActivity.this, "Register user information for the first time!", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                    // transition to member registration screen for initial login.
+                    Toast.makeText(LoginActivity.this, "Register user information
+                    for the first time!", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(getApplicationContext(),
+                    RegisterActivity.class);
                     startActivityForResult(intent, REQUEST_RESULT);
                 }
             }
@@ -491,82 +617,110 @@ AlertDialog show = new AlertDialog.Builder(LoginActivity.this)
 ```
 
 ---
-## 会員管理機能の作成
-### 動作確認(1)ログインをしてみましょう
+## Create User Management Function
+### Operation check(1)Let's log in
 
-* ここではシュミレーターでビルドし、動作確認を行います
-* ログイン画面で「会員登録」をタップします
-* 会員登録画面でメールアドレスを入力し「登録メールを送信」をタップします
- * メッセージを確認してください
- * エラーが発生したらここを見てください。
- [エラーコード一覧](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
+* Build on the simulator/actual device and check the operation.
+* Tap "Member registration on the login screen
+* Enter email address on the member registration screen, and tap "Send registration email"
+ * Check the message
+ * Check here if you get an error.
+ [Error code list](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
 
 ---
-## 会員管理機能の作成
-### 動作確認(1)ログインをしてみましょう
+## Create User Management Function
+### Operation check(1)Let's log in
 
 .center[
-![動作確認①ログイン](readme-image/動作確認①ログイン.png)
+![動作確認①ログイン](readme-image-en/動作確認①ログイン.png)
 ]
 
 ---
-## 会員管理機能の作成
-### 動作確認(1)ログインをしてみましょう
+## Create User Management Function
+### Operation check(1)Let's log in
 
-* 会員登録メールが届くので、パスワード設定します
+* You will receive a member registration email, then set a password for new user, repeat the password once more for confirmation of password
+*  (Form is shown in Japanese, but it can customized, we skipped this time)
 
 .center[
-![動作確認①パスワード登録](readme-image/動作確認①パスワード登録.png)
+![動作確認①パスワード登録](readme-image-en/動作確認①パスワード登録.png)
 ]
 
 ---
-## 会員管理機能の作成
-### 動作確認(1)ログインをしてみましょう
+## Create User Management Function
+### Operation check(1)Let's log in
 
-* 再びログイン画面に戻り「メールアドレス」と「パスワード」でログインします
- * ログを確認してください
-* mBaaSのダッシュボードを確認してください
- * 会員管理にユーザーが登録されました
+* Return to the login screen again, and log in with your "email address" and "password". Make sure that you can log in successfully.
+ * Please check the log.
+* In addition, check the registered user information on the mBaaS management screen.
+ * Select "User Management" at the the administration screen, and then select "All Users".
+ * Users are registered in user list
 
 .center[
-![動作確認①会員登録完了](readme-image/動作確認①会員登録完了.png)
+![動作確認①会員登録完了](readme-image-en/動作確認①会員登録完了.png)
 ]
 .footnote[
-[エラーコード一覧](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
+[Error code list](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
 ]
 
 ---
-## 会員管理機能の作成
-### 会員管理③：ユーザー情報更新
+## Create User Management Function
+### About Code(1)Let's Log in!
 
+* In order to request an email for membership registration, we make an API request using the following method provided by the Android SDK.
+```java
+NCMBUser.requestAuthenticationMailInBackground(email, DoneCallback());
+```
+* A default membership registration email format will be sent. (This time email is in Japanese, but the mail format and domain can be customized.)
+
+---
+## Create User Management Function
+### About Code(1)Let's Log in!
+
+* Once the membership registration is completed, we do log in it. To perform the login, Android SDK requests API to log in
+using the following method.
+```java
+NCMBUser.loginWithMailAddressInBackground(email, password, new LoginCallback());
+```
+* As parameters, we receive email and password from the input form, and generate a request in the method to communicate to the server.
+When the result is returned from the server side, the pattern processing which is a normal/error judgment of NCMBException is performed in LoginCallback ().
+
+
+---
+## Create User Management Function
+### User Management③：Update User Information
+
+* When you log in for the first time, a screen for registering user attributes will appear. we are now going to proceed the user information registration process.
 .center[
-![UserInfoRegistration](readme-image/UserInfoRegistration.png)
+![UserInfoRegistration](readme-image-en/UserInfoRegistration.png)
 ]
 
 ---
-## 会員管理機能の作成
-### 会員管理③：ユーザー情報更新
+## Create User Management Function
+### User Management③：Update User Information
 
 
-* `RegisterActivity.java`を開きます
-* `doRegister()`を開きます
-* 初回のみ表示されるユーザー情報登録画面に入力した情報をmBaaSのユーザー情報に追加する処理を実装します
-* コメントの下にコードを追記していきます
+* Open `RegisterActivity.java`
+* Open `doRegister()`
+* Implement the process of adding the information entered on the first-time user information registration screen to the mBaaS user information.
+* We are now going to add code below the comment.
 
 ```java
-//**************** 【mBaaS/User③: ユーザー情報更新】***************
+//**************** 【mBaaS/User③: Update User Information】***************
 
 
 ```
 
-* かなり下の方にあります
+* Please be careful as it is very far down.
 
 ---
-## 会員管理機能の作成
-### 会員管理③：ユーザー情報更新
+## Create User Management Function
+### User Management③：Update User Information
+
+* Here is the code we are going to add
 
 ```java
-//**************** 【mBaaS/User③: ユーザー情報更新】***************
+//**************** 【mBaaS/User③: Update User Information】***************
 common.currentUser.put("nickname", nickname);
 common.currentUser.put("prefecture", prefecture);
 common.currentUser.put("gender", selectedGender);
@@ -576,10 +730,10 @@ common.currentUser.saveInBackground(new DoneCallback() {
     @Override
     public void done(NCMBException e) {
         if (e != null) {
-            // 更新失敗時の処理
+            // Process at Update Failures
 
         } else {
-            // 更新成功時の処理
+            // Process on successful update
 
         }
     }
@@ -588,13 +742,13 @@ common.currentUser.saveInBackground(new DoneCallback() {
 ```
 
 ---
-## 会員管理機能の作成
-### 会員管理③：ユーザー情報更新
+## Create User Management Function
+### User Management③：Update User Information
 
-* それぞれ処理を追記します
+* Add processing for each.
 
 ```java
-// 更新失敗時の処理
+// Process at Update Failures
 new AlertDialog.Builder(RegisterActivity.this)
         .setTitle("Notification from NIFCLOUD")
         .setMessage("Save failed! Error:" + e.getMessage())
@@ -603,10 +757,10 @@ new AlertDialog.Builder(RegisterActivity.this)
 ```
 
 ```java
-// 更新成功時の処理
+// Process on successful update
 new AlertDialog.Builder(RegisterActivity.this)
        .setTitle("Notification from NIFCLOUD")
-       .setMessage("保存成功しました! 入力ありがとうございます")
+       .setMessage("Save succeeded! Thank you for entering.")
        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
            public void onClick(DialogInterface dialog, int which) {
                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
@@ -617,81 +771,134 @@ new AlertDialog.Builder(RegisterActivity.this)
 ```
 
 ---
+## Create User Management Function
+### User Management③：Update User Information
+
+* Implementation of the Update User Information is now done.
+* Now have a build and check.
+
+---
+## Create User Management Function
+### Operation check(2)Register Member Information
+
+* Build again with the simulator and check the operation.
+* Only for the first time log in, User information registration screen appears.
+* Enter some words/number, and tap "Register".
+ * Membership information is updated, so let's check the registered user information again on the administration screen of mBaaS.
+ Please make sure information is registered correctly.
+ * Please check the log.
+
+---
+## Create User Management Function
+### Operation check(2)Register Member Information
+
+.center[
+![動作確認②ユーザー情報追加](readme-image-en/動作確認②ユーザー情報追加.png)
+]
+.footnote[
+[Error code list](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
+]
+
+---
+## Create User Management Function
+### User Management③：Update User Information
+
+* Here we finished with the User Management functions.
+* Here is the end for Day1, if you have any questions, feel free to ask.
+* We will continue with Shop settings, Favorite Management on day2. And if we have enough time,
+we will prepare settings for Push Notifications.
+
+---
+layout: true
+class: center, middle, inverse_sub
+---
+# Setting Shop Information and Prepare for Favorites Function!
+
+.size_large[
+＜Day 2＞
+]
+
+---
 layout: true
 class: center, middle, inverse
 ---
-# 3.Shop情報の設定
+# 3.Setting Shop Information
 
 ---
 layout: false
-## Shop情報の設定
-### mBaaSにShop情報を用意する（データストア）
+## Setting Shop Information
+### Prepare Shop information in mBaaS (Datastore)
 
-* ニフクラ mobile backendのダッシュボードから「データストア」を開き、「＋作成▼」ボタンをクリックし、「インポート」をクリックします
-* クラス名に「__Shop__」と入力します
-* ダウンロードしたサンプルプロジェクトにあるSettingフォルダ内の「__Shop.json__」を選択してアップロードします
+* Open "Datastore" from management screen of NIFCLOUD mobile backend, then click "+Create▼" button, then click "Import".
+* Type "__Shop__" at the class name (Please note that S should be capitalized!)
+* Select "__Shop.json__" located in the setting folder of the downloaded sample project, and upload it.
 
 .center[
-![ShopClass](readme-image/ShopClass.png)
+![ShopClass](readme-image-en/ShopClass.png)
 ]
 
 ---
-## Shop情報の設定
-### mBaaSにShop情報を用意する（データストア）
+## Setting Shop Information
+### Prepare Shop information in mBaaS (Datastore)
 
-こんな感じでインポートされます
+Here you can see how it is imported.
 
 .center[
-![mBaaS_ShopData](readme-image/mBaaS_ShopData.PNG)
+![mBaaS_ShopData](readme-image-en/mBaaS_ShopData.PNG)
 ]
 
 ---
-## Shop情報の設定
-### mBaaSにShop情報を用意する（ファイルストア）
+## Setting Shop Information
+### Prepare Shop information in mBaaS (Filestore)
 
-* ニフクラ mobile backendのダッシュボードから「ファイルストア」を開き、「↑アップロード」ボタンをクリックします
-* ダウンロードしたサンプルプロジェクトにあるSettingフォルダ内の「icon」「Shop」「Sale」内にあるファイルをすべてをアップロードします
+* Open "Filestore" from the NIFCLOUD mobile backend administration screen, and click the "↑ Upload" button.
+* Upload all files located in "icon" "Shop" "Sale" which are in the Setting folder in the sample project that you downloaded.
+
+---
+## Setting Shop Information
+### Prepare Shop information in mBaaS (Filestore)
 
 .center[
-![imageUpload](readme-image/imageUpload.png)
+![imageUpload](readme-image-en/imageUpload.png)
 ]
 
 ---
-## Shop情報の設定
-### mBaaSにShop情報を用意する（ファイルストア）
 
-* こんな感じでアップロードされます
+* Here you can see how it is uploaded.
 
 .center[
-![UploadImage](readme-image/UploadImage.png)
+![UploadImage](readme-image-en/UploadImage.png)
 ]
 
 ---
-## Shop情報の設定
-### データストア：「Shop」クラスのデータを取得
+## Setting Shop Information
+### Datastore: Obtain data of "Shop" class
 
-* `MainActivity.java`を開きます
-* `doLoadShop()`を開きます
-* インポートしたShopクラスのデータを取得する処理を実装します
-  - コメントの下にコードを追記していきます
+* First, we are going to implement datastore processing.
+* Open `MainActivity.java`
+* Open `doLoadShop()`
+* Implement the processing to obtain data of imported Shop class
+  - We are now going to add code below the comment.
 
 ```java
-//**************** 【mBaaS/Shop①: 「Shop」クラスのデータを取得】***************
+//**************** 【mBaaS/Shop①: Obtain data of "Shop" class】***************
 
 
 ```
 
 ---
-## Shop情報の設定
-### データストア：「Shop」クラスのデータを取得
+## Setting Shop Information
+### Datastore: Obtain data of "Shop" class
+
+* Here is the code we are going to add
 
 ```java
-//**************** 【mBaaS/Shop①: 「Shop」クラスのデータを取得】***************
-// 「Shop」クラスのクエリを作成
+//**************** 【mBaaS/Shop①: Obtain data of "Shop" class】***************
+// Create query for "Shop" class
 NCMBQuery<NCMBObject> query = new NCMBQuery<>("Shop");
-//データストアからデータを検索
+//Search data from datastore
 List<NCMBObject> results = query.find();
-//グローバル変数を更新する
+//Update Global Variables
 common.shops = results;
 ListView lv = (ListView) findViewById(R.id.lstShop);
 lv.setAdapter(new ShopListAdapter(this, results));
@@ -699,45 +906,48 @@ lv.setAdapter(new ShopListAdapter(this, results));
 
 
 ---
-## Shop情報の設定
-### ファイルストア①：icon画像の取得
+## Setting Shop Information
+### Filestore①：icon image acquisition
 
+* We are now going to implement image processing of icons displayed in the store list.
 .center[
-![icon](readme-image/icon.png)
+![icon](readme-image-en/icon.png)
 ]
 
 ---
-## Shop情報の設定
-### ファイルストア①：icon画像の取得
+## Setting Shop Information
+### Filestore①：icon image acquisition
 
-* `ShopListAdapter.java`を開きます
- * `ShopListAdapter.java`はリストの項目を作成するファイルです
-* トップ画面に各ショップのアイコンをmBaaSから取得して表示する処理を実装します
-- コメントの下にコードを追記していきます
+* We are going to do the image acquisition processing registered in the filestore.
+* Open `ShopListAdapter.java`
+ * `ShopListAdapter.java` is a file to create list items
+* Implement the process to acquire each shop's icon from mBaaS, and to display them on the top screen.
+- We are now going to add code below the comment.
 
 ```java
-////**************** 【mBaaS/File①: ショップ画像を取得】***************
+//**************** 【mBaaS/File①: shop image acquisition】***************
 
 
 ```
 
 ---
-## Shop情報の設定
-### ファイルストア①：icon画像の取得
+## Setting Shop Information
+### Filestore①：icon image acquisition
 
+* Here is the code we are going to add
 
 ```java
-//**************** 【mBaaS/File①: ショップ画像を取得】***************
+//**************** 【mBaaS/File①: shop image acquisition】***************
         try {
             NCMBFile file = new NCMBFile(filename);
             file.fetchInBackground(new FetchFileCallback() {
                 @Override
                 public void done(byte[] data, NCMBException e) {
                     if (e != null) {
-                        // 取得失敗時の処理
+                        // Process at acquiition failures
                         Log.d(TAG, e.getMessage());
                     } else {
-                        // 取得成功時の処理
+                        // Process on successful acquisition
                         Bitmap bmp = null;
                         if (data != null) {
                             bmp = BitmapFactory.decodeByteArray(data, 0, data.length);
@@ -752,18 +962,18 @@ lv.setAdapter(new ShopListAdapter(this, results));
 ```
 
 ---
-## Shop情報の設定
-### ファイルストア①：icon画像の取得
+## Setting Shop Information
+### Filestore①：icon image acquisition
 
-* それぞれ処理を追記します
+* Add processing for each.
 
 ```java
-// 取得失敗時の処理
+// Process at acquiition failures
 Log.d(TAG, e.getMessage());
 ```
 
 ```java
-// 取得成功時の処理
+// Process on successful acquisition
 Bitmap bmp = null;
 if (data != null) {
     bmp = BitmapFactory.decodeByteArray(data, 0, data.length);
@@ -772,35 +982,45 @@ holder.img.setImageBitmap(bmp);
 ```
 
 ---
-## Shop情報の設定
-### ファイルストア②：Shop画像の取得
+## Setting Shop Information
+### Filestore②：Shop image acquiition
 
+* We are now going to display the detail of the shop.
 .center[
-![Shop](readme-image/Shop.png)
+![Shop](readme-image-en/Shop.png)
 ]
 
 ---
-## Shop情報の設定
-### ファイルストア②：Shop画像の取得[実装済み]
+## Setting Shop Information
+### Filestore②：Shop image acquisition
 
-* `ShopActivity.java`を開きます
-* `onCreate()`を開きます
-* Shop画面に各ショップの画像をmBaaSから取得して表示する処理も同様に実装できます
-
+* We are going to do image acquisition processing registered in the filestore
+* Open `ShopActivity.java`
+* Open `onCreate()`
+* The process to acquire each shop's image from mBaaS and to display them on the Shop screen can be implemented as well.
+-  We are now going to add code below the comment.
 
 ```java
+//**************** 【mBaaS/File②: acquire shop detail image】***************
 
-//**************** 【mBaaS/File②: ショップ詳細画像を取得】***************
+```
+
+---
+
+* Here is the code we are going to add
+
+```java
+//**************** 【mBaaS/File②: acquire shop detail image】***************
 try {
     NCMBFile file = new NCMBFile(shop_image);
     file.fetchInBackground(new FetchFileCallback() {
         @Override
         public void done(byte[] data, NCMBException e) {
             if (e != null) {
-                //取得失敗時の処理
+                //Process at acquiition failures
                 Log.d(TAG, e.getMessage());
             } else {
-                //取得成功時の処理
+                //Process on successful acquisition
                 Bitmap bmp = null;
                 if (data != null) {
                     bmp = BitmapFactory.decodeByteArray(data, 0, data.length);
@@ -814,74 +1034,111 @@ try {
 }
 ```
 
----
-## Shop情報の設定
-### 動作確認(2)会員情報登録とShop情報表示
-
-* 再びシュミレーターでビルドし、動作確認を行います
-* ログイン後初回のみ、ユーザー情報登録画面が表示されます
-* 入力し「登録」をタップします
- * このとき、会員情報が更新されますので、mBaaSのダッシュボードを確認してみましょう
- * ログを確認してください
-
-.center[
-![動作確認②ユーザー情報追加](readme-image/動作確認②ユーザー情報追加.png)
-]
-.footnote[
-[エラーコード一覧](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
-]
+* The implementation for shop-related information is now done. Let's move on to the operation check.
 
 ---
-## Shop情報の設定
-### 動作確認(2)会員情報登録とShop情報表示
+## Setting Shop Information
+### Operation check(2) Diplay Shop Information
 
-* トップ画面に「icon画像」「Shop名」「カテゴリ」が表示されます
-* Shopを１つ選んでタップします
- * mBaaSに登録されているimageにアクセスし、Shopページ（画像）が表示されます
-* 会員ページをタップします
- * ユーザー情報が表示されます
+* Build again with the simulator and check the operation.
+* After the registration of user information (only appears at first time) is completed, the top screen of the App to be displayed. (The top screen will be directly displayed from the 2nd log in.)
+* "icon image", "Shop Name" and "Category" to be displayed on the top screen.
+* Select 1 Shop and tap it.
+ * Access to the image registered in mBaaS, and the Shop page (Image) appears.
+* Click "User info" from App menu, and tap member page.
+ * Registered user information to be displayed.
+
+---
+## Setting Shop Information
+### Operation check(2) Diplay Shop Information
 
 .center[
-![動作確認②](readme-image/動作確認②.png)
+![動作確認②](readme-image-en/動作確認②.png)
 ]
 .footnote[
-[エラーコード一覧](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
+[Error code list](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
 ]
+
+---
+## Setting Shop Information
+### About code(2)Diplay Shop Information
+
+* In order to display the list of shops, the Shop class data registered in the data store is searched and acquired.
+To search all data, the find() method provided by the NCMBQuery class is used as following.
+
+```java
+// Create query for "Shop" class
+NCMBQuery<NCMBObject> query = new NCMBQuery<>("Shop");
+//Search data from datatore
+List<NCMBObject> results = query.find();
+```
+
+* mBaaS allows to specify search criteria, although we do not specify this time.
+please see[document](https://mbaas.nifcloud.com/doc/current/datastore/basic_usage_android.html#%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E6%A4%9C%E7%B4%A2%E3%81%AE%E5%88%A9%E7%94%A8&gsc.tab=0) on searching.
+* When searching for a large amount of data, set a limit of number of data.(Default of limit is 100,
+  Up to 1000 can be specified. In case of more than 1000, specify the number of skipped data, and use them together with a skip item that can be set as the start point of the obtained data.)
+
+---
+## Setting Shop Information
+### About code(2)Diplay Shop Information
+
+* To acquire the image in filestore, specify the file name and use fetchInBackground() to download the file
+when generate instance of NCMBFile as follows.
+
+```java
+NCMBFile file = new NCMBFile(filename);
+file.fetchInBackground(new FetchFileCallback());
+```
+
+---
+layout: true
+class: center, middle, inverse_sub
+---
+# Prepare for Favorites Function and push Notification!
 
 ---
 layout: true
 class: center, middle, inverse
 ---
-# 4.お気に入り機能の作成
+# 4.Create Favorites Function
 
 ---
 layout: false
-## お気に入り機能の作成
-### お気に入り機能について
+## Create Favorites Function
+### About Favorites Function
 
-* お気に入り機能は好きなShopをお気に入りとして保存できる機能です
- * 「お気に入り」画面ではSwitchと「登録」ボタンで設定します
- * 「Shop」画面では「お気に入りを登録する」をタップすることでShop単位で設定できます
+* Favorites function allows you to save your favorite Shop.
+ * In the "Favorites" screen, App user set favorites with switch and "Register" button.
+ * On the "Shop" screen, tap "Adding favorites" to set by units of Shop.
 
 .center[
-![favorite](readme-image/favorite.png)
+![favorite](readme-image-en/favorite.png)
 ]
 
 ---
-## お気に入り機能の作成
-### 会員管理④：ユーザー情報の更新[実装済み]
+## Create Favorites Function
+### User Management④：Update User Information
 
-* `FavoriteActivity.java`を開きます
-* `doFavoriteSave()`を開きます
-* お気に入り画面からfavoriteデータの更新処理はユーザー情報の登録と同様にして実装できます
-
----
-## お気に入り機能の作成
-### 会員管理④：ユーザー情報の更新[実装済み]
-
+* Implements a favorites function so that logged-in users to register favorites on the "Favorites" screen.
+* Open `FavoriteActivity.java`
+* Open `doFavoriteSave()`
+- We are now going to add code below the comment.
 
 ```java
-//**************** 【mBaaS/User ④: 会員情報更新】***************
+//**************** 【mBaaS/User ④: Update member information】***************
+
+
+```
+* Updating favorites data from the favorites screen can be implemented in the same way as registering user information.
+
+---
+### Create Favorites Function
+### User Management④：Update User Information
+
+* Here is the code we are going to add
+
+```java
+//**************** 【mBaaS/User ④: Update member information】***************
 List<String> list = new ArrayList<String>();
 list = common.currentUser.getList("favorite");
 common.currentUser.put("favorite", list);
@@ -889,42 +1146,69 @@ common.currentUser.saveInBackground(new DoneCallback() {
     @Override
     public void done(NCMBException e) {
         if (e != null) {
-            //保存失敗時の処理
-            <<省略>>
+            //Process at save failures
+
         } else {
-            //保存成功時の処理
-            new AlertDialog.Builder(FavoriteActivity.this)
-                    .setTitle("Notification from NIFCLOUD")
-                    .setMessage("お気に入り保存成功しました!")
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(getApplicationContext(), FavoriteActivity.class);
-                            startActivityForResult(intent, REQUEST_RESULT);
-                        }
-                    })
-                    .show();
+            //Process on successful save
+
         }
     }
 });
 ```
 
 ---
-## お気に入り機能の作成
+### Create Favorites Function
+### User Management④：Update User Information
 
-### 会員管理⑤：ユーザー情報の更新[実装済み]
-
-* `ShopActivity.java`を開きます
-* `doFavoriteRegister()`を開きます
-* Shop画面からもfavoriteデータの更新処理はユーザー情報の登録と同様にして実装できます
-
----
-## お気に入り機能の作成
-
-### 会員管理⑤：ユーザー情報の更新[実装済み]
-
+* Here are the processing codes to add for each.
 
 ```java
-//**************** 【mBaaS/User⑤: 会員情報更新】***************
+//Process at save failures
+new AlertDialog.Builder(FavoriteActivity.this)
+        .setTitle("Notification from mBaas")
+        .setMessage("Save failed! Error:" + e.getMessage())
+        .setPositiveButton("OK", null)
+        .show();
+```
+
+```java
+//Process on successful save
+new AlertDialog.Builder(FavoriteActivity.this)
+        .setTitle("Notification from mBaas")
+        .setMessage("Saved Favorites Successfully!")
+        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(getApplicationContext(), FavoriteActivity.class);
+                startActivityForResult(intent, REQUEST_RESULT);
+            }
+        })
+        .show();
+```
+
+---
+## Create Favorites Function
+
+### User Management⑤：Update User Information
+
+* We are now going to implement the processing of the Shop screen.
+* Open `ShopActivity.java`
+* Open `doFavoriteRegister()`
+- We are now going to add code below the comment.
+
+```java
+//**************** 【mBaaS/User⑤: Update member information】***************
+
+
+```
+* Update process of favorites data can be implemented from Shop screen as well as registration of user information.
+
+---
+## Create Favorites Function
+
+### User Management⑤：Update User Information
+* The code to add is followings.
+```java
+//**************** 【mBaaS/User⑤: update member information】***************
 List<String> list = new ArrayList<String>();
 list = common.currentUser.getList("favorite");
 list.add(objId);
@@ -933,371 +1217,591 @@ common.currentUser.saveInBackground(new DoneCallback() {
     @Override
     public void done(NCMBException e) {
         if (e != null) {
-            //更新失敗時の処理
-            <<省略>>
+            //Process at update failures
+
         } else {
-            //更新成功時の処理
-          　<<省略>>
+            //Process on successful update
+
         }
     }
 });
 ```
 
 ---
-## お気に入り機能の作成
-### 動作確認(3)お気に入り情報登録・更新
+## Create Favorites Function
 
-* 再びシュミレーターでビルドし、動作確認を行います
-* ログイン後トップ画面下の「お気に入り」をタップします
-* お気に入り画面からお気に入り登録をしてみましょう
-* 各Shop画面からも同様に登録してみましょう
- * ログを確認してください
+### User Management⑤：Update User Information
+
+* Here are the processing codes to add for each.
+
+```java
+// Process at update failures
+new AlertDialog.Builder(ShopActivity.this)
+        .setTitle("Notification from mBaas")
+        .setMessage("Save failed! Error:" + e.getMessage())
+        .setPositiveButton("OK", null)
+        .show();
+```
+
+```java
+// Process on successful update
+new AlertDialog.Builder(ShopActivity.this)
+        .setTitle("Notification from mBaas")
+        .setMessage("Saved Favorites Successfully!")
+        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(getApplicationContext(), ShopActivity.class);
+                intent.putExtra("objectId", objId);
+                intent.putExtra("name", name);
+                intent.putExtra("shop_image", shop_image);
+                startActivityForResult(intent, REQUEST_RESULT);
+            }
+        })
+        .show();
+```
+
+---
+## Create Favorites Function
+### Operation check(3)Register and update favorites information
+
+* Build again with the simulator and check the operation.
+* After log in, tap "Favorites" at the bottom of the top screen
+* Let's add favorites from the Favorites screen.
+* Let's register from each Shop screen as well.
+ * Please check the log
 
 .center[
-![動作確認③](readme-image/動作確認③.png)
+![動作確認③](readme-image-en/動作確認③.png)
 ]
 
 .footnote[
-[エラーコード一覧](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
+[Error code list](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
 ]
 
 ---
-layout: true
-class: center, middle, inverse_sub
----
-# プッシュ通知を送ろう！
+## Create Favorites Function
+### About code(3)Register and update favorites information
 
-.size_large[
-＜後半＞
+* The registration of favorites is basically the favorites data added to the information of registered users,
+and stored as an array of IDs (objectId) of selected stores.
+* Please check the data registered in the User Management on administration screen of mBaaS.
+.center[
+![コード解説③](readme-image-en/favoriteDataInUserData.png)
 ]
+
+---
+## Create Favorites Function
+### About code(3)Register and update favorites information
+
+* For the code implementation, acquire an instance of the currently logged in user in common.currentUser as followings.
+* Set the value to save in form of put(key, value).
+* Save user information in the method of saveInBackground().
+
+```java
+list = common.currentUser.getList("favorite");
+common.currentUser.put("favorite", list);
+common.currentUser.saveInBackground(new DoneCallback());
+```
+
+* This is the end of Datastore, User Management and File Management part. We will continue with Push Notification part.
 
 ---
 layout: true
 class: center, middle, inverse
 ---
-# 1.プッシュ通知の準備
+# 1.Preparation for Push Notification
+
+.size_large[
+＜Day 3＞
+]
+
 
 ---
 layout: false
-## プッシュ通知の準備
-### このあとのデバッグについて
+## Preparation for Push Notification
+### About Debug
 
-* 以下の用意が必要です
- * デバッグ用のAndroid実機 (4.0~)
- * プッシュ通知設定ファイル(json)
-* プッシュ通知設定ファイル(json)がまだの場合は下記をご参照ください
- * [【サンプル】アプリにプッシュ通知を組み込もう！](https://github.com/NIFCLOUD-mbaas/android_push_demo#手順)
+* We need to prepare the following
+ * Android device for debugging (7.0~)
+ * Google Account (To use Firebase Cloud Messaging, a push notification for Android)
+* Main settings
+ * Set Firebase private key to mobile backend
+ * Put google-service.json in App
+* Detailed instructions for the push notification setting file (json) are described below.
+ * [【Sample】Let's implement push notifications into the App!](https://github.com/NIFCLOUD-mbaas/android_push_demo#手順)
 
 
 ---
-## プッシュ通知の準備
-### mBaaSの設定
 
-* プッシュ通知の許可を行います
-* プッシュ通知設定ファイル(json)を設定します
+## Preparation for Push Notification
+### Set Firebase Private Key to Mobile Backend
+
+* Use the Firebase Console to obtain the API key. Access to below address and log in with your Google account.
+https://console.firebase.google.com/
+* If you still have not a project, you need to create one.
+* Enter the project name in the Create Wizard, and set the Analytics feature valid or invalid as needed. (we don't plan to use the Analytics function during this Hands-on.)
+
+---
+
+## Preparation for Push Notification
+### Set Firebase Private Key to Mobile Backend
 
 .center[
-![mBaaSプッシュ通知設定](readme-image/mBaaSプッシュ通知設定.png)
+![コード解説③](readme-image-en/Firebase_newproject.png)
 ]
 
 ---
-## プッシュ通知の準備
-### google.service.jsonファイルの作成
-1. [Firebase](https://console.firebase.google.com/u/0/) にログインして、新規プロジェクトを作成します。
-2. 「プロジェクトの概要」の右側にある![設定アイコン](readme-image/settingIcon.png)をクリックして、「プロジェクトを設定」を選択します。
-3. 「全般」タブで下のマイアプリで「Android」プラットフォームのアイコンを選択します。
+
+## Preparation for Push Notification
+### Preparation for Push Notification
+
+* On upper left corner of the created project there is a link "Project OverView".
+* Move the cursor to the gear button, and the menu will appear. Click "Project Settings". This takes you to the Firebase Project Settings screen.
 
 .center[
-![FirebaseSetting](readme-image/Firebasesetting.png)
+![コード解説③](readme-image-en/Firebase_projectsettings.png)
 ]
 
 ---
 
-## プッシュ通知の準備
-### google.service.jsonファイルの設定
-4.google-services.jsonを発行してアプリに登録
-* アプリケーション ID を [Android パッケージ名] フィールドに入力します。</br>
-例) com.nifcloud.AndroidAdvancePushApp
+## Preparation for Push Notification
+### Preparation for Push Notification
+
+* Select "Service Account" from the tab menu on the setting screen.
 
 .center[
-![アプリ登録](readme-image/RegisterApp.png)
+![コード解説③](readme-image-en/Firebase_serviceaccount.png)
 ]
 
 ---
-## プッシュ通知の準備
-### google.service.jsonファイルの設定
+## Preparation for Push Notification
+### Set Firebase Private Key to Mobile Backend
 
-5.google-services.jsonを追加する</br>
-* 「Download google-services.json」 をクリックして、Firebase Android 構成ファイル（google-services.json）を取得します。
-* 構成ファイルをアプリのモジュール（アプリレベル）ディレクトリに移動します。
+* Click "Generate new private key" in the "Service Account" screen, then click "Create Key" in the modal that appears.
+* Firebase private key to be created, so download it. It will be used to setup to Mobile backend.
 
 .center[
-![設定ファイルダウンロード](readme-image/DownloadFile.png)
+![projectnumber](readme-image-en/firebase_privatekey.png)
+]
+
+
+---
+## Preparation for Push Notification
+### Set Firebase Private Key to Mobile Backend
+
+* Select "App Settings" at the top right of mBaaS administration screen and select "Push Notification".
+* Validate push notifications function
+* Set the private key downloaded in the previous step as the push notification configuration file (json).
+
+---
+## Preparation for Push Notification
+### Set Firebase Private Key to Mobile Backend
+
+.center[
+![mBaaSプッシュ通知設定](readme-image-en/mBaaSプッシュ通知設定.png)
 ]
 
 ---
-## プッシュ通知の準備
-### google.service.jsonファイルの設定
+## Preparation for Push Notification
+### Create google-services.json File
 
-6.アプリで Firebase プロダクトを有効にするには、Gradle ファイルに google-services プラグインを追加します。
+1. Log in to [Firebase](https://console.firebase.google.com/u/0/) , and open project.
+2. Click ![設定アイコン](readme-image-en/settingIcon.png) located on the right side of "Project Overview, and select "Set Project".
+3. With the "General" tab, select the "Android" platform icon in My Apps.
 
-* ルートレベル（プロジェクト レベル）の Gradle ファイル（build.gradle）に、Google サービス プラグインを含めるためのルールを追加します。
+.center[
+![FirebaseSetting](readme-image-en/Firebasesetting.png)
+]
+
+---
+
+## Preparation for Push Notification
+### Set google-services.json File
+
+4. Publish google-services.json and register in the App
+* Enter the application ID in the [Android Package Name] field.</br>
+i.e.) com.nifcloud.AndroidAdvancePushApp * package name of the current project
+
+---
+
+.center[
+![アプリ登録](readme-image-en/RegisterApp.png)
+]
+
+---
+## Preparation for Push Notification
+### Set google-services.json File
+
+5. Add google-services.json
+* Click "Download google-services.json", and acquire Firebase Android configuration file（google-services.json）.
+* Open the project which is being used in Android Studio, and move to the App module (App Level) directory.
+
+---
+
+.center[
+![設定ファイルダウンロード](readme-image-en/DownloadFile.png)
+]
+
+---
+## Preparation for Push Notification
+### Set google-services.json File
+
+6. add google-services plugin to the Gradle file in order to validate Firebase product with App.
+
+* Add a rule to include Google service plugins
+in the Gradle file (build.gradle) at the root level (Project Level)
 
 ```
 classpath 'com.google.gms:google-services:4.3.3'
 ```
 
-* モジュール（アプリレベル）の Gradle ファイル（通常は app/build.gradle）で、ファイルの末尾に以下の行を追加します。
+* With Gradle file (Usually app/build.gradle) of module (App level), add the following line to the end of the file.
 
 ```
 apply plugin: 'com.google.gms.google-services'
 ```
+* Please refer to the [document](https://mbaas.nifcloud.com/doc/current/push/basic_usage_android.html#%E3%82%A2%E3%83%97%E3%83%AA%E3%81%A7%E3%81%AE%E8%A8%AD%E5%AE%9A) for more details of the settings of App side
+
 
 ---
-## プッシュ通知の準備
-### Firebaseの秘密鍵をmobile backendに設定
+## Preparation for Push Notification
+### Push Notification①：Set Reception of Push Notification
 
-* Firebaseのダッシュボードの左上付近の「Project OverView」という文章があります。その横に歯車ボタンがあり、そこにカーソルを合わせると文章が出てきます。その中の「プロジェクトの設定」をクリックします。
+* Open AndroidManifest file and register service as an element of application tag.
+(Service provided by the default Android SDK)
 
-* クリックするとFirebaseのプロジェクトの設定画面が出てきます。その設定画面の上のメニューの中から「サービスアカウント」をクリックします。
+```
+Comment: "NOTICE: Push received service will be insert here"
+```
+
 ---
-## プッシュ通知の準備
-### Firebaseの秘密鍵をmobile backendに設定
+## Preparation for Push Notification
+### Push Notification①：Set Reception of Push Notification
 
-* クリックすると以下のような画面が出てきます。この画面の中の「新しい秘密鍵の生成」をクリックして、出てくるモーダルの中の「キーを生成」をクリックします。
-* そうするとFirebaseの秘密鍵がダウンロードできます。
+```
+Comment:  NOTICE: Push received service will be insert here
+
+<service
+     android:name="com.nifcloud.mbaas.core.NCMBFirebaseMessagingService"
+     android:exported="false">
+     <intent-filter>
+         <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+     </intent-filter>
+</service>
+```
+
+
+---
+## Preparation for Push Notification
+### Push Notification①：Register Device
+
+* Device registration process is carried out at the initialization of the following implemented SDK, so no additional implementation is required.
+
+```java
+NCMB.initialize(this.getApplicationContext(),"APP_KEY","CLIENT_KEY");
+```
+
+---
+## Preparation for Push Notification
+### Operation check for push notification①：Register Device
+
+* Build the app on the device.
+* Please activate the App. Check if the device information is registered on mBaaS administration screen as follows.
 
 .center[
-![projectnumber](readme-image/projectnumber.png)
+![アプリ登録](readme-image-en/installation_registered_mbaas.png)
 ]
 
 ---
-## プッシュ通知の準備
-### プッシュ通知①：端末を登録
+## Preparation for Push Notification
+### Operation check for push notification①：Deliver Test Push Notification
 
-* 端末を登録処理はSDK初期化時に行われますので、追加実装不要
+* Let's deliver push notification
+* Open "Push Notification" on mBaaS administration screen, and click "+ New Push Notification".
+* On the Push Notification setting screen:
+ * Enter message and title as you want
+ * Leave [Deliver Immediately] as it is.
+ * Check [Deliver to Android devices].
+ * Click [New push notification] , and deliver
+
+---
+## Preparation for Push Notification
+### Operation check for push notification①：Deliver Test Push Notification
+
+* Confirm that the delivery icon is displayed on the device.
+* Open "Push Notification" on mBaaS administration screen, and check the status of created push notification in the push notification list.
+* If it is succeeded, "Delivered" is displayed.
+* If error occurs, please refer to the [document](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#%E3%80%8C%E9%85%8D%E4%BF%A1%E3%82%A8%E3%83%A9%E3%83%BC%E5%86%85%E5%AE%B9%E3%80%8D%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6) , and Review the settings.
+
+---
+layout: true
+class: center, middle, inverse_sub
+---
+# Let's Deliver Push Notifications!【Practical Edition】
+
 ---
 layout: true
 class: center, middle, inverse
 ---
-# 2.プッシュ通知を送信<br>セグメント配信
+# Practice for Push Notification１：Segment Delivery
 
 ---
 layout: false
-## プッシュ通知を送信：セグメント配信
-### プッシュ通知②：installationにユーザー情報を紐づける
+## Deliver Push Notification：Segment Delivery
+### Push Notification②：Link User Information to installation
 
-* `RegisterActivity.java`を開きます
-* 「【mBaaS/User③: ユーザー情報更新】」の更新成功時の処理内にセグメント配信のために必要なユーザー情報をinstallationに紐付けるための処理を実装します
+* Open `RegisterActivity.java`
+* Implement a process to link user information required for segment delivery to installation in the process of "[mBaaS/User 3: Update user information]" update success
 
 
 ```java
-//**************** 【mBaaS：プッシュ通知②】installationにユーザー情報を紐づける ***************
+//**************** 【mBaaS：Push Notification②】link user information to installation ***************
 
 ```
 
 ---
-## プッシュ通知を送信：セグメント配信
-### プッシュ通知②：installationにユーザー情報を紐づける
+## Deliver Push Notification：Segment Delivery
+### Push Notification②：Link User Information to installation
 
-* 次のように追記します
+* Add the following.
 
 ```java
-//**************** 【mBaaS：プッシュ通知②】installationにユーザー情報を紐づける ***************
-NCMBInstallation currInstallation  = NCMBInstallation.getCurrentInstallation();
-currInstallation.put("prefecture", prefecture);
-currInstallation.put("gender", selectedGender);
-currInstallation.put("favorite", list);
-currInstallation.saveInBackground(new DoneCallback() {
-    @Override
-    public void done(NCMBException e) {
-        if (e != null) {
-            //更新失敗時の処理
-        } else {
-            //更新成功時の処理
+//**************** 【mBaaS：Push Notification②】link user information to installation ***************
+try {
+    NCMBInstallation currInstallation  = NCMBInstallation.getCurrentInstallation();
+    currInstallation.put("prefecture", prefecture);
+    currInstallation.put("gender", selectedGender);
+    currInstallation.put("favorite", list);
+    currInstallation.saveInBackground(new DoneCallback() {
+        @Override
+        public void done(NCMBException e) {
+            if (e != null) {
+                //Process at update failure
+            } else {
+                //Process on successful update
+            }
         }
-    }
-});
+    });
+} catch (NCMBException e) {
+    e.printStackTrace();
+}
 ```
 
 ---
-## プッシュ通知を送信：セグメント配信
-### プッシュ通知②：installationにユーザー情報を紐づける
+## Deliver Push Notification：Segment Delivery
+### Push Notification②：Link User Information to installation
 
-* それぞれ処理を追記します
+* Add processing for each.
 
 ```java
-//更新失敗時の処理
-Log.d(TAG, "端末情報を保存失敗しました。");
+//Process at update failure
+Log.d(TAG, "Failed to save device information.");
 ```
 
 ```java
-//更新成功時の処理
-Log.d(TAG, "端末情報を保存成功しました。");
+//Process on successful update
+Log.d(TAG, "Saving device information succeeded.");
 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 startActivityForResult(intent, REQUEST_RESULT );
 ```
 
 ---
-## プッシュ通知を送信：セグメント配信
-### プッシュ通知③：installationにユーザー情報を紐づける<br>[実装済み]
+## Deliver Push Notification：Segment Delivery
+### Push Notification③：Link User Information to installation<br>
 
-* `FavoriteActivity.java`開きます
-* `doFavoriteSave()`を開きます
-* 同様に、お気に入り画面でお気に入り情報が更新されるたびに、installation情報が書き換えられます
+* Open `FavoriteActivity.java`
+* Open `doFavoriteSave()`
+ - Open the comment below
 
 ```java
-//**************** 【mBaaS：プッシュ通知④】installationにユーザー情報を紐づける***************
-//端末情報を保存する
-NCMBInstallation currInstallation = NCMBInstallation.getCurrentInstallation();
-currInstallation.put("favorite", list);
-currInstallation.saveInBackground(new DoneCallback() {
-    @Override
-    public void done(NCMBException e) {
-        if (e != null) {
-            //保存失敗
-            Log.d(TAG, "端末情報を保存失敗しました。");
-        } else {
-            //保存成功
-            Log.d(TAG, "端末情報を保存成功しました。");
+//**************** 【mBaaS：Push Notification④】link user information to installation***************
+
+```
+
+* Installation information is rewritten each time the favorites information is updated on the Favorites screen.
+
+---
+
+* Add the following code.
+
+```java
+//**************** 【mBaaS：Push Notification④】link user information to installation***************
+//save device information
+try {
+    NCMBInstallation currInstallation = NCMBInstallation.getCurrentInstallation();
+    currInstallation.put("favorite", list);
+    currInstallation.saveInBackground(new DoneCallback() {
+        @Override
+        public void done(NCMBException e) {
+            if (e != null) {
+                //Save Failed
+                Log.d(TAG, "Failed to save device information.");
+            } else {
+                //Save Successful
+                Log.d(TAG, "Saving device information succeeded.");
+            }
         }
-    }
-});
+    });
+} catch (NCMBException e) {
+    e.printStackTrace();
+}
 ```
 
 ---
-## プッシュ通知を送信：セグメント配信
-### プッシュ通知④：installationにユーザー情報を紐づける<br>[実装済み]
+## Deliver Push Notification：Segment Delivery
+### Push Notification④：Link User Information to installation
 
-* `ShopActivity.java`開きます
-* `doFavoriteRegister()`開きます
-* 同様に、Shop画面でもお気に入り情報が更新されるたびに、installation情報が書き換えられます
+* Open `ShopActivity.java`
+* Open `doFavoriteRegister()`
+- Open the comment below
 
 ```java
-//****************【mBaaS：プッシュ通知⑤】installationにユーザー情報を紐づける***************
-NCMBInstallation currInstallation  = NCMBInstallation.getCurrentInstallation();
-currInstallation.put("favorite", list);
-currInstallation.saveInBackground(new DoneCallback() {
-    @Override
-    public void done(NCMBException e) {
-        if (e != null) {
-            //保存失敗した場合の処理
-            Log.d(TAG, "端末情報を保存失敗しました。");
-        } else {
-            //保存成功した場合の処理
-            Log.d(TAG, "端末情報を保存成功しました。");
+//****************【mBaaS：Push Notification⑤】link user information to installation***************
+
+```
+
+---
+
+* Installation information is rewritten each time the favorites information is updated on the Shop screen.
+* Add the following code.
+
+```java
+//****************【mBaaS：Push Notification⑤】link user information to installation***************
+try {
+    NCMBInstallation currInstallation  = NCMBInstallation.getCurrentInstallation();
+    currInstallation.put("favorite", list);
+    currInstallation.saveInBackground(new DoneCallback() {
+        @Override
+        public void done(NCMBException e) {
+            if (e != null) {
+                //Process at saving fails
+                Log.d(TAG, "Failed to save device information");
+            } else {
+                //Process on successful save
+                Log.d(TAG, "Saving device information succeeded.");
+            }
         }
-    }
-});
+    });
+} catch (NCMBException e) {
+    e.printStackTrace();
+}
 ```
 ---
-## プッシュ通知を送信：セグメント配信
-### 動作確認の準備
+## Deliver Push Notification：Segment Delivery
+### Preparation for Operation Check
 
-* もう一度会員情報登録画面を表示するため、mBaaSの会員管理画面で「クラスの編集」をクリックします
-* 「nickname」にチェックを入れて上の「削除」ボタンで削除します
+* In order to display the member information registration screen again, click "Edit Class" on the User Management screen of mBaaS.
+* Check "nickname" and use the "Delete" button above to delete.
 
 .center[
-![動作確認④セグメント0](readme-image/動作確認④セグメント0.png)
+![動作確認④セグメント0](readme-image-en/動作確認④セグメント0.png)
 ]
 
 ---
-## プッシュ通知を送信：セグメント配信
-### 動作確認の準備
+## Deliver Push Notification：Segment Delivery
+### Preparation for Operation Check
 
-* 実機でアプリをビルドします
-* アプリを起動します
+* Build an App on a device.
+* Activate App
 
 ```text
-端末情報を保存成功しました。
+Saving device information succeeded.
 ```
 
-* デバイストークンの取得に成功したら、mBaaSダッシュボードで確認します
+* Once the device token has been successfully acquired, verify it on the mBaaS administration screen.
+
+---
+## Deliver Push Notification：Segment Delivery
+### Preparation for Operation Check
 
 .center[
-![動作確認④デバイストークン](readme-image/動作確認④デバイストークン.png)
+![動作確認④デバイストークン](readme-image-en/installation_registered_mbaas.png)
 ]
 
 .footnote[
-[エラーコード一覧](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
+[Error code list](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
 ]
 
 ---
-## プッシュ通知を送信：セグメント配信
-### 動作確認の準備
+## Deliver Push Notification：Segment Delivery
+### Preparation for Operation Check
 
-* ログインをし、再びユーザー登録をします
- * このとき、installationが更新されますのでダッシュボードを確認します
- * ログを確認してください
+* Log in and register again
+ * At this time, the installation is updated, so check on the administration screen.
+ * Please check the log
 
 .center[
-![動作確認④installation追加](readme-image/動作確認④installation追加.png)
+![動作確認④installation追加](readme-image-en/動作確認④installation追加.png)
 ]
 .footnote[
-[エラーコード一覧](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
+[Error code list](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
 ]
 
 ---
-## プッシュ通知を送信：セグメント配信
-### 動作確認(4)セグメント配信
+## Deliver Push Notification：Segment Delivery
+### Operation Check(4)Segment Delivery
 
-__shopB__ をお気に入り登録しているユーザーに絞り込んでプッシュ通知を配信してみましょう！
+Let's deliver push notifications by narrowing users who have has registered __shopB__ as favorites!
 
-* あらかじめshopBをお気に入りに設定しておきます(アプリ側)
-* mBaaSのダッシュボードからShopクラスのデータを開き、shopBの「objectId」をコピーします
+* Set shopB as favorite beforehand (App side)
+* From the mBaaS administration screen, open the Shop class data and copy the shopB "objectId".
 
 .center[
-![動作確認④セグメント2](readme-image/動作確認④セグメント2.png)
+![動作確認④セグメント2](readme-image-en/動作確認④セグメント2.png)
 ]
 
 ---
-## プッシュ通知を送信：セグメント配信
-### 動作確認(4)セグメント配信
+## Deliver Push Notification：Segment Delivery
+### Operation Check(4)Segment Delivery
 
-* プッシュ通知を作成します
-* メッセージを入力します
- * 例：ShopBセール開催中！
-* 「Android端末に配信する」にチェックを入れます
-* 「配信端末」を設定します
+* Create push notification
+* Enter a message
+ * i.e.：ShopB Now on sale!
+* Check "Deliver to Android device".
+* Set "Target Devices"
+
+---
+## Deliver Push Notification：Segment Delivery
+### Operation Check(4)Segment Delivery
 
 .center[
-![動作確認④セグメント1](readme-image/動作確認④セグメント1.png)
+![動作確認④セグメント1](readme-image-en/動作確認④セグメント1.png)
 ]
 
 ---
-## プッシュ通知を送信：セグメント配信
-### 動作確認(4)セグメント配信
+## Deliver Push Notification：Segment Delivery
+### Operation Check(4)Segment Delivery
 
-* 「installationクラスからの絞込み」を選択します
-* 絞り込み設定をします
- * ここでコピーしたShopBのobjectIdを貼り付けます
+* Select "Search devices in Installation Class"
+* Narrow down setting
+ * Paste the copied ShopB objectId here
 
 .center[
-![動作確認④セグメント3](readme-image/動作確認④セグメント3.png)
+![動作確認④セグメント3](readme-image-en/動作確認④セグメント3.png)
 ]
 
 ---
-## プッシュ通知を送信：セグメント配信
-### 動作確認(4)セグメント配信
+## Deliver Push Notification：Segment Delivery
+### Operation Check(4)Segment Delivery
 
-* 「１端末に向けて送信されます」と表示されればOKです
-* 「プッシュ通知を作成する」をクリックします
-* 少し待つと配信されます→端末を確認！
+* It is OK if "1 Send to devices" is displayed.
+* Click "New push notification"
+* It will be delivered after waiting for a while → Check the device!
 
 .center[
-![動作確認④セグメント4](readme-image/動作確認④セグメント4.png)
+![動作確認④セグメント4](readme-image-en/動作確認④セグメント4.png)
 ]
 
 ---
-## プッシュ通知を送信：セグメント配信
-### 動作確認(4)セグメント配信[おまけ]
+## Deliver Push Notification：Segment Delivery
+### Operation Check(4)Segment Delivery[bonus]
 
 .size_large[
-いろいろなパターンで送ってみましょう！
-* 別のショップを絞り込み
-* 性別で絞込み
-* ShopAをお気に入り登録かつ女性で絞込み
-* ShopDをお気に入り登録かつ東京都で絞込み
+Let's deliver it in various patterns!
+* Narrow down to another shop
+* Narrow down by gender
+* Favorite ShopA and narrow down to women
+* Favorite ShopD and narrow down to Tokyo
 * and more...
 ]
 
@@ -1305,172 +1809,206 @@ __shopB__ をお気に入り登録しているユーザーに絞り込んでプ�
 layout: true
 class: center, middle, inverse
 ---
-# 2.プッシュ通知を送信<br>リッチプッシュ
+# Practice Push Notification 2：Rich Push
 
 ---
 layout: false
 
-## プッシュ通知を送信：リッチプッシュ
-### リッチプッシュについて
+## Deliver Push Notification：Rich Push
+### About Rich Push
 
-* プッシュ通知登録時にURLを指定することで、開封時にWebビューを表示できる機能です
-* プッシュ通知開封でアプリが起動するときに表示されます
- * アプリ起動中には表示されませんので動作確認にはアプリを閉じておく必要があります（仕様）
+* This function allows to display a Web view when open a push notification by specifying a URL at the time of push notification registration.
+* Web view appears when App is activated by opening push notification.
+ * It can not be displayed while the application is activating, so App needs to be closed to check the operation (spec).
 
 ---
-## プッシュ通知を送信：リッチプッシュ
-### リッチプッシュについて
+## Deliver Push Notification：Rich Push
+### About Rich Push
 
-* 今回はShopのセール画像を「公開ファイル」機能を利用して配信します
+* This time we are going to deliver the sale image of Shop using the "Public File" function.
 
 .center[
-![sale_image](readme-image/sale_image.png)
+![sale_image](readme-image-en/sale_image.png)
 ]
 
 
 ---
-## プッシュ通知を送信：リッチプッシュ
-### 公開ファイルとは
+## Deliver Push Notification：Rich Push
+### What is Public File?
 
-* 「公開ファイル」機能とは、ファイルストアに保存した画像をリンクでアクセスできるようにする機能です
-* ファイルストアに登録した画像を「公開ファイル」として公開することが可能です
+* "Public File" is a function that allows linked access to images saved in the filestore.
+* Images stored in the filestore can be published as "Public Files".
 
 ---
-## プッシュ通知を送信：リッチプッシュ
-### 公開ファイル設定
+## Deliver Push Notification：Rich Push
+### Public File Settings
 
-* mBaaSのダッシュボードで、公開ファイル設定「HTTPでの取得」を有効にします
+* Validate public filesSettings "Access by public URL (HTTPS)" on the mBaaS administration screen.
 
 .center[
-![mBaaS公開ファイル設定](readme-image/mBaaS公開ファイル設定.png)
+![mBaaS公開ファイル設定](readme-image-en/mBaaS公開ファイル設定.png)
 ]
 
 ---
-## プッシュ通知を送信：リッチプッシュ
-### 公開ファイルURL確認方法
+##  Deliver Push Notification：Rich Push
+### How to check URL of public file
 
-* ファイルストアで確認できます
-* 今回は「ShopD_sale.png」の公開ファイルURLを使用してみます
- * URLをコピーします
+* You can check it in the filestore.
+* Today we will use the public file URL of "ShopD_sale.png".
+ * Copy URL
 
 .center[
-![公開ファイルURL](readme-image/公開ファイルURL.png)
+![公開ファイルURL](readme-image-en/公開ファイルURL.png)
 ]
 
 ---
-## プッシュ通知を送信：リッチプッシュ
-### 公開ファイルURL確認方法
+## Deliver Push Notification：Rich Push
+### How to check URL of public file
 
-* ブラウザでリンクをたたいて表示されることを確認してください
+* Tap the link in the browser, and confirm the display.
 
 .center[
-![公開ファイル確認](readme-image/公開ファイル確認.png)
+![公開ファイル確認](readme-image-en/公開ファイル確認.png)
 ]
 
 ---
-## プッシュ通知を送信：リッチプッシュ
-### プッシュ通知⑥：リッチプッシュ通知を表示させる処理
+## Deliver Push Notification：Rich Push
+### Push Notification⑥：Process for Displaying Rich Push Notifications
 
-* `MainActivity.java`を開きます
-* `onResume()`を開きます
-* 以下のコメントの直下にコードを追加します
+* Open `MainActivity.java`
+* Open `onResume()`
+* Add code directly below the comment
 
 ```java
-//**************** 【mBaaS：プッシュ通知⑥】リッチプッシュ通知を表示させる処理 ***************
+//********** 【mBaaS：Push Notification⑥】process for displaying rich push notifications *********
 ```
 
-* 次のように追記します
+* Add the following.
 
 ```java
-//**************** 【mBaaS：プッシュ通知⑥】リッチプッシュ通知を表示させる処理 ***************
-//リッチプッシュ通知の表示
+//********* 【mBaaS：Push Notification⑥】process for displaying rich push notifications **********
+//Diplay rich push notifications
 NCMBPush.richPushHandler(this, getIntent());
 
-//リッチプッシュを再表示させたくない場合はintentからURLを削除します
+//If you don't want the rich push to re-display, delete the URL from the intent
 getIntent().removeExtra("com.nifcloud.mbaas.RichUrl");
 ```
 
 ---
-## プッシュ通知を送信：リッチプッシュ
-### 動作確認(5)リッチプッシュ
+## Deliver Push Notification：Rich Push
+### Operation Check(5)Rich Push
 
-* 実機でアプリをビルドします
-* 起動した後にホームに戻ります
+* Build an App on device.
+* Return to Home after activating
 
 
 ---
-## プッシュ通知を送信：リッチプッシュ
-### 動作確認(5)リッチプッシュ
+## Deliver Push Notification：Rich Push
+### Operation Check(5)Rich Push
 
-* プッシュ通知を作成します
-* メッセージを入力します
-* URL欄にコピーした公開ファイルURLを貼り付けます
-* そのまま送信してみましょう
+* Create Push Notification
+* Enter a message
+* Paste the copied public file URL into the URL field
+* Let's send it
+
+---
+## Deliver Push Notification：Rich Push
+### Operation Check(5)Rich Push
+
 
 .center[
-![動作確認⑤リッチプッシュ](readme-image/動作確認⑤リッチプッシュ.png)
+![動作確認⑤リッチプッシュ](readme-image-en/動作確認⑤リッチプッシュ.png)
 ]
 
 ---
-## プッシュ通知を送信：リッチプッシュ
-### 動作確認(5)リッチプッシュ
+## Deliver Push Notification：Rich Push
+### Operation Check(5)Rich Push
 
-* しばらくするとプッシュ通知が届きます
-* プッシュ通知を開くとWebView画面が現れ、公開ファイルが表示されます
+* After a while, you will receive a push notification.
+* When you open the push notification, WebView screen appears and the public file is displayed.
+* Notice that if you are not logged in, you need to login first.
 
 .center[
-![動作確認⑤リッチプッシュ2](readme-image/動作確認⑤リッチプッシュ2.png)
+![動作確認⑤リッチプッシュ2](readme-image-en/動作確認⑤リッチプッシュ2.png)
 ]
 
 ---
 layout: true
 class: center, middle, inverse
 ---
-# 2.プッシュ通知を送信<br>ペイロード
+# Practice Push Notification３：Payload
 
 ---
 layout: false
-## プッシュ通知を送信：ペイロード
-### ペイロードについて
+## Deliver Push Notification：Payload
+### About Payload
 
-* プッシュ通知にはJSON形式で任意のデータを含めることができ、通知を受信した時に、そのデータを受け取って処理を行うことができる機能です
-* 今回は、配信時間とメッセージのデータを設定し、時限式でローカルプッシュを表示させる内容を実装します
- * プッシュ通知に設定するJSON形式のデータの例
- ```text
- {"deliveryTime":"2016-09-22 17:00:00", "message":"タイムセールスタート！"}
- ```
+* Push notifications can contain arbitrary data in JSON format, and can receive and process that data when receiving notification.
+* Today, we are going to set the delivery time and data of message, and implement the content to display the local push in a timed manner.
+* Example of JSON-formatted data for push notifications setting
 
----
-## プッシュ通知を送信：ペイロード
-### プッシュ通知⑦：アプリが起動中にプッシュ通知からデータを取得する
-
-* Androidの場合、受信する処理をカスタマイズするために、カスタムサービスを作成する必要があります
-* 今回、コード内にMyCustomFirebaseMessagingServiceは作成済み
-  - 作成に関して、実装方法はこちらのドキュメントをご参考ください。
-  - [プッシュ通知でJSONデータを取得する](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
-
----
-## プッシュ通知を送信：ペイロード
-### プッシュ通知⑦：アプリがプッシュ通知からデータを取得する
-
-* `MyCustomFirebaseMessagingService.java`を開きます
-* `onMessageReceived()`メソッド外に次のメソッドを実装します
-
-```java
-//**************** 【mBaaS：プッシュ通知⑦】アプリがプッシュ通知からデータを取得する***************
+```text
+{"deliveryTime":"2016-09-22 17:00:00", "message":"Time Sale Started!"}
 ```
 
 ---
-## プッシュ通知を送信：ペイロード
-### プッシュ通知⑦：アプリがプッシュ通知からデータを取得する
+## Deliver Push Notification：Payload
+### Push Notification⑦：Acquire Data from Push Notification while App is activating
 
-以下のように追記します
+* For Android, we need to create a custom service to customize the receiving process.
+* We are going to use MyCustomFirebaseMessagingService in code. Try rewriting the default service.
+  - For your reference, refer to this document for how to implement.
+  - [Acquire JSON Data from Push Notification](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
+
+---
+## Deliver Push Notification：Payload
+### Push Notification⑦：Acquire Data from Push Notification while App is activating
+
+* Open AndroidManifest file
+* Before
+
+```
+<service
+    android:name="com.nifcloud.mbaas.core.NCMBFirebaseMessagingService"
+    android:exported="false">
+    <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+    </intent-filter>
+</service>
+```
+
+* After
+
+```
+<service
+    android:name=".MyCustomFirebaseMessagingService"
+    android:exported="false">
+    <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+    </intent-filter>
+</service>
+```
+
+---
+## Deliver Push Notification：Payload
+### Push Notification⑦：App Obtains Data from Push Notifications
+
+* Open `MyCustomFirebaseMessagingService.java`
+* Implement the following method outside `onMessageReceived()` method.
 
 ```java
-//**************** 【mBaaS：プッシュ通知⑦】アプリが起動中にプッシュ通知からデータを取得する***************
-//ペイロードデータの取得
+//******** 【mBaaS：Push Notification⑦】App Obtains Data from Push Notification********
+```
+
+---
+
+Add the following.
+
+```java
+//******** 【mBaaS：Push Notification⑦】App Obtains Data from Push Notification********
+//acquisition of payload data
 if (remoteMessage != null && remoteMessage.getData() != null) {
-    //ペイロードデータの取得
+    //acquisition of payload data
     Bundle data = new Bundle();
     Map<String, String> d = remoteMessage.getData();
     for (String key : d.keySet()) {
@@ -1482,12 +2020,12 @@ if (remoteMessage != null && remoteMessage.getData() != null) {
             JSONObject json = new JSONObject(data.getString("com.nifcloud.mbaas.Data"));
 
             if (json.has("deliveryTime") && json.has("message")) {
-                Log.d(TAG, "ペイロードを取得しました！");
-                //ペイロード処理実装
+                Log.d(TAG, "Acquired payload!");
+                //implement payload processing
 
             }
         } catch (JSONException e) {
-            //エラー処理
+            //error handling
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -1496,149 +2034,194 @@ if (remoteMessage != null && remoteMessage.getData() != null) {
 ```
 
 ---
-## プッシュ通知を送信：ペイロード
-### プッシュ通知⑦：アプリがプッシュ通知からデータを取得する
+### Deliver Push Notification：Payload
+### Push Notification⑦：App Obtains Data from Push Notification</br>
+* We are going to implement payload processing
+* Display local push notifications at the specified time.
 
-* ペイロード処理実装します
-* 指定した時間でローカルプッシュ通知を表示させます。
+
+---
 
 ```java
-//ペイロード処理実装
-// 変換対象の日付文字列
+//implement payload processing
+// Date string to be converted
 String dateStr = json.getString("deliveryTime");
 String message = json.getString("message");
 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-// Date型変換
+// Date type conversions
 Date formatDate = sdf.parse(dateStr);
 long triggerlMilli = formatDate.getTime();
 
 //Local notification trigger
 AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
-Intent notificationIntent = new Intent("android.media.action.DISPLAY_NOTIFICATION");
+Intent notificationIntent = new Intent(this, AlarmReceiver.class);
 notificationIntent.addCategory("android.intent.category.DEFAULT");
 notificationIntent.putExtra("message", message);
 
-PendingIntent broadcast = PendingIntent.getBroadcast(this, 100, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+PendingIntent broadcast = PendingIntent.getBroadcast(this, 100,
+notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 alarmManager.setExact(AlarmManager.RTC_WAKEUP, triggerlMilli , broadcast);
 ```
 
 
 ---
-## プッシュ通知を送信：ペイロード
-### 動作確認(6)ペイロード（アプリ起動時）
+## Deliver Push Notification：Payload
+### Operation Check(6)Payload（When the App is activated）
 
-* 実機でアプリをビルドします
-* 起動し、下記ログを確認します
+* Build App on a device.
+* Activate and check the log below.
 
 ```text
-端末情報を保存成功しました。
+Saving device information succeeded.
 ```
 
-* そのままアプリを起動した状態にします
+* Leave the application running.
 
 ---
-## プッシュ通知を送信：ペイロード
-### 動作確認(6)ペイロード（アプリ起動時）
+## Deliver Push Notification：Payload
+### Operation Check(6)Payload（When the App is activated）
 
-* プッシュ通知に設定するJSON形式のデータを作成します
- * JSONデータに設定する時間は、今から __５分以上未来の時間__ に変更してください
- * JSONデータに設定するメッセージは、自由に変更してください
+* Create JSON-formatted data for push notifications
+ * Change the time set for JSON data from now to __5 minutes or later__
+ * change the message you set for the JSON data as you want
  ```text
- {"deliveryTime":"2016-09-29 17:00:00", "message":"タイムセールスタート！"}
+ {"deliveryTime":"2016-09-29 17:00:00", "message":"Time Sale Started!"}
  ```
- * 作成したらコピーをしておいてください
+ * Please make a copy of it.
 
 ---
-## プッシュ通知を送信：ペイロード
-### 動作確認(6)ペイロード（アプリ起動時）
+## Deliver Push Notification：Payload
+### Operation Check(6)Payload（When the App is activated）
 
-* プッシュ通知を作成します
- * タイトル、メッセージを入力が無い場合、サイレントプッシュとして送られます
- * 「JSON」に作成したJSONデータを貼り付けます
+* Create Push Notification
+ * If you do not enter any title or message, it will be delivered as a silent push.
+ * Paste the created JSON data in "JSON"
+
+---
+## Deliver Push Notification：Payload
+### Operation Check(6)Payload（When the App is activated）
 
 .center[
-![動作確認⑥ペイロード1](readme-image/動作確認⑥ペイロード1.png)
+![動作確認⑥ペイロード1](readme-image-en/動作確認⑥ペイロード1.png)
 ]
 
 ---
-## プッシュ通知を送信：ペイロード
-### 動作確認(6)ペイロード（アプリ起動時）
+## Deliver Push Notification：Payload
+### Operation Check(6)Payload（When the App is activated）
 
-* プッシュ通知を送信します
-* プッシュ通知を受信（サイレント）すると次のログが表示されます
+* Deliver Push Notification
+* The following log is displayed when push notification is received(silent)
 
 ```text
-ペイロードを取得しました！
+Acquired payload!
 ```
 
-* 指定時間にプッシュ通知が表示されることを確認してください
+* Please make sure the push notification appears at the specified time.
 
 .footnote[
-[エラーコード一覧](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
+[Error code list](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
 ]
 ---
-## プッシュ通知を送信：ペイロード
-### 動作確認(6)ペイロード（非起動時）
+## Deliver Push Notification：Payload
+### Operation Check(6)Payload（When the App is NOT activated）
 
-* アプリを閉じます
-* 再びプッシュ通知を作成します
+* Close the App
+* Re-create Push Notification
+
+---
+## Deliver Push Notification：Payload
+### Operation Check(6)Payload（When the App is NOT activated）
 
 .center[
-![動作確認⑥ペイロード2](readme-image/動作確認⑥ペイロード2.png)
+![動作確認⑥ペイロード2](readme-image-en/動作確認⑥ペイロード2.png)
 ]
 
 ---
-## プッシュ通知を送信：ペイロード
-### 動作確認(6)ペイロード（非起動時）
+## Deliver Push Notification：Payload
+### Operation Check(6)Payload（When the App is NOT activated）
 
-* アプリが起動していないので、サイレントプッシュでは気付いてもらえません
-* アプリを起動してもらう内容でプッシュ通知を作成します
- * メッセージ　例）`明日PM5時よりタイムセールを行います！`
-* JSON形式のデータを貼り付けます
- * JSONデータ作成　例）明日午後5時を設定
+* The App is not running, so users cannot notice by silent push.
+* Create a push notification with the content to attract users to activate App.
+ * Message　i.e.）`Limited-time sale from 5 o'clock tomorrow!`
+* Paste data in JSON format
+ * Create JSON data 　i.e.）Set for 5 PM tomorrow
  ```text
- {"deliveryTime":"2016-09-30 17:00:00", "message":"タイムセールスタート！"}
+ {"deliveryTime":"2016-09-30 17:00:00", "message":"Time Sale Starts!"}
  ```
- * 時間は今から５分以上未来の時間に変更してください
+ * Please change the time to more than 5 minutes later from now.
 
 ---
-## プッシュ通知を送信：ペイロード
-### 動作確認(6)ペイロード（非起動時）
+## Deliver Push Notification：Payload
+### Operation Check(6)Payload（When the App is NOT activated）
 
-* プッシュ通知を受信したら、プッシュ通知からアプリを起動します
-* 起動時にデータを取得します
- * １度起動してあればアプリは閉じてもOKです
-* 指定時間にプッシュ通知が表示されることを確認してください
+* Once you receive push notification, activate App from the push notification.
+* Acquire data when the App activates
+ * You can close the App if it has been activated once.
+* Please make sure the push notification is displayed at the specified time
 
 ---
 layout: true
 class: center, middle, inverse_sub
 ---
-# まとめ
+# Summary
 
 ---
 layout: false
-## まとめ
-### 学んだこと
+## Summary
+### What we have learned
 
-* mBaaSの各機能を使用してアプリ作成方法を学んだ！
- * 会員管理機能
- * データストア
- * ファイルストア
- * プッシュ通知
-* プッシュ通知の活用方法がわかった！
- * セグメント配信
- * リッチプッシュ
- * ペイロード
+* How to create an App using each function of mBaaS
+ * User Management
+ * Datastore
+ * Filestore
+ * Push notification
+* How to utilize push notifications
+ * Segment delivery
+ * Rich push
+ * Payload
 
 ---
-## 参考
+layout: false
+## At the end
+### Survey
 
-* 開催中の[セミナー](https://ncmb.connpass.com/)のご案内
- * 随時新しいセミナーを実施していきますのでぜひチェックしてください！
-* ハンズオン内容が実装された完全版プロジェクト
- * __[AndroidAdvancePush【完成版】](https://github.com/NIFCLOUD-mbaas/AndroidAdvancePush/archive/master.zip)__
-* コードは[GitHub](https://github.com/NIFCLOUD-mbaas/AndroidAdvancePush)に公開しています
- * __master__：完成版
- * __handson__：セミナー版
+Thank you very much for joining us. It would be great if you could tell us about NIFCLOUD mobile backend through questionnaire.
+
+Click [here](https://docs.google.com/forms/d/e/1FAIpQLSfCeg47P-PU0hMgX57q15t-PTBFJEJIPJrDfHkWxMWj269vzA/viewform)
+---
+## Reference
+
+* Full version project with hands-on content implemented
+ * __[AndroidAdvancePush【Full version】](https://github.com/NIFCLOUD-mbaas/AndroidAdvancePush/archive/master.zip)__
+* You can find code at [GitHub](https://github.com/NIFCLOUD-mbaas/AndroidAdvancePush)
+ * __master__：Full version
+ * __handson__：Seminar version
+
+---
+## About master project (1)
+
+* If you want to test step by step using Master project, notice the following
+* To test the following features in: Let's create "mBaaS Shop List" App!(day 1) and Let's prepare for Favorite features! (day 2), comment out the following line in app/build.gradle files
+
+```
+apply plugin: 'com.google.gms.google-services'
+```
+->
+```
+//apply plugin: 'com.google.gms.google-services'
+```
+* Remember to change YOUR_APPLICATION_KEY, YOUR_CLIENT_KEY
+
+---
+## About master project (2)
+
+* In Push Notification preparation part and to test other push notification features, after copy google-services.json to Project, remove the comment out code // from the line.
+
+```
+//apply plugin: 'com.google.gms.google-services'
+```
+->
+```
+apply plugin: 'com.google.gms.google-services'
+```
