@@ -1419,8 +1419,9 @@ https://console.firebase.google.com/
 ### Set google-services.json File
 
 4. Publish google-services.json and register in the App
-* Enter the application ID in the [Android Package Name] field.</br>
-i.e.) com.nifcloud.AndroidAdvancePushApp * package name of the current project
+
+* Enter the application package name in the [Android Package Name] field.</br>
+i.e.) mbaas.com.nifcloud.advancepush * package name of the current project
 
 ---
 
