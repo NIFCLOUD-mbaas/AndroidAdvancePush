@@ -1421,8 +1421,6 @@ https://console.firebase.google.com/
 3. Open the "General" tab, select the "Android" platform icon in My Apps in the end of the page.
 
 ---
-## Preparation for Push Notification
-### Create google-services.json File
 
 .center[
 ![FirebaseSetting](readme-image-en/Firebasesetting.png)
