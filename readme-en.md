@@ -399,7 +399,7 @@ dependencies {
 ### What is already done for the project
 
 * Pre-coding files is mainly as below
- * Create the design of App in the `files in the layout folder`, and to code the Action processing for each screen in an `Activity files`
+ * Create the design of App in the files in the `layout folder`, and to code the Action processing for each screen in `Activity files`
 
 ---
 
@@ -787,6 +787,15 @@ new AlertDialog.Builder(RegisterActivity.this)
  * Membership information is updated, so let's check the registered user information again on the administration screen of mBaaS.
  Please make sure information is registered correctly.
  * Please check the log.
+
+---
+## Create User Management Function
+### Operation check(2)Register Member Information
+
+.center[
+![UserInfoRegistration](readme-image-en/UserInfoRegistration.png)
+]
+
 
 ---
 ## Create User Management Function
@@ -1206,7 +1215,9 @@ new AlertDialog.Builder(FavoriteActivity.this)
 ## Create Favorites Function
 
 ### User Management⑤：Update User Information
+
 * The code to add is followings.
+
 ```java
 //**************** 【mBaaS/User⑤: update member information】***************
 List<String> list = new ArrayList<String>();
@@ -1325,8 +1336,8 @@ layout: false
  * Android device for debugging (7.0~)
  * Google Account (To use Firebase Cloud Messaging, a push notification for Android)
 * Main settings
- * Set Firebase private key to mobile backend
- * Put google-service.json in App
+ * 1. Set Firebase private key to mobile backend
+ * 2. Put google-service.json in App
 * Detailed instructions for the push notification setting file (json) are described below.
  * [【Sample】Let's implement push notifications into the App!](https://github.com/NIFCLOUD-mbaas/android_push_demo#手順)
 
@@ -1355,8 +1366,8 @@ https://console.firebase.google.com/
 ## Preparation for Push Notification
 ### Preparation for Push Notification
 
-* On upper left corner of the created project there is a link "Project OverView".
-* Move the cursor to the gear button, and the menu will appear. Click "Project Settings". This takes you to the Firebase Project Settings screen.
+* Open the created project. On upper left corner of the created project there is a link "Project OverView".
+* Move the cursor to the Gear button, and the menu will appear. Click "Project Settings". This takes you to the Firebase Project Settings screen.
 
 .center[
 ![コード解説③](readme-image-en/Firebase_projectsettings.png)
@@ -1406,8 +1417,12 @@ https://console.firebase.google.com/
 ### Create google-services.json File
 
 1. Log in to [Firebase](https://console.firebase.google.com/u/0/) , and open project.
-2. Click ![設定アイコン](readme-image-en/settingIcon.png) located on the right side of "Project Overview, and select "Set Project".
-3. With the "General" tab, select the "Android" platform icon in My Apps.
+2. Click ![設定アイコン](readme-image-en/settingIcon.png) located on the right side of "Project Overview, and select "Project Settings".
+3. Open the "General" tab, select the "Android" platform icon in My Apps in the end of the page.
+
+---
+## Preparation for Push Notification
+### Create google-services.json File
 
 .center[
 ![FirebaseSetting](readme-image-en/Firebasesetting.png)
@@ -1418,24 +1433,19 @@ https://console.firebase.google.com/
 ## Preparation for Push Notification
 ### Set google-services.json File
 
-4. Publish google-services.json and register in the App
-
+4.Publish google-services.json and register in the App
 * Enter the application package name in the [Android Package Name] field.</br>
 i.e.) mbaas.com.nifcloud.advancepush * package name of the current project
+
+5.Add google-services.json
+* Click "Download google-services.json", and acquire Firebase Android configuration file（google-services.json）.
+* Open the project which is being used in Android Studio, and move to the App module (App Level) directory.
 
 ---
 
 .center[
 ![アプリ登録](readme-image-en/RegisterApp.png)
 ]
-
----
-## Preparation for Push Notification
-### Set google-services.json File
-
-5. Add google-services.json
-* Click "Download google-services.json", and acquire Firebase Android configuration file（google-services.json）.
-* Open the project which is being used in Android Studio, and move to the App module (App Level) directory.
 
 ---
 
@@ -1447,7 +1457,7 @@ i.e.) mbaas.com.nifcloud.advancepush * package name of the current project
 ## Preparation for Push Notification
 ### Set google-services.json File
 
-6. add google-services plugin to the Gradle file in order to validate Firebase product with App.
+6.add google-services plugin to the Gradle file in order to validate Firebase product with App (If necessary).
 
 * Add a rule to include Google service plugins
 in the Gradle file (build.gradle) at the root level (Project Level)
@@ -1456,7 +1466,7 @@ in the Gradle file (build.gradle) at the root level (Project Level)
 classpath 'com.google.gms:google-services:4.3.3'
 ```
 
-* With Gradle file (Usually app/build.gradle) of module (App level), add the following line to the end of the file.
+* With Gradle file (Usually app/build.gradle) of module (App level), add the following line to the end of the file (If necessary).
 
 ```
 apply plugin: 'com.google.gms.google-services'
@@ -1529,6 +1539,14 @@ NCMB.initialize(this.getApplicationContext(),"APP_KEY","CLIENT_KEY");
 ## Preparation for Push Notification
 ### Operation check for push notification①：Deliver Test Push Notification
 
+.center[
+![アプリ登録](newPushTest.png)
+]
+
+---
+## Preparation for Push Notification
+### Operation check for push notification①：Deliver Test Push Notification
+
 * Confirm that the delivery icon is displayed on the device.
 * Open "Push Notification" on mBaaS administration screen, and check the status of created push notification in the push notification list.
 * If it is succeeded, "Delivered" is displayed.
@@ -1561,8 +1579,6 @@ layout: false
 ```
 
 ---
-## Deliver Push Notification：Segment Delivery
-### Push Notification②：Link User Information to installation
 
 * Add the following.
 
