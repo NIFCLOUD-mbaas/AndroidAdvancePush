@@ -1540,7 +1540,7 @@ NCMB.initialize(this.getApplicationContext(),"APP_KEY","CLIENT_KEY");
 ### Operation check for push notification①：Deliver Test Push Notification
 
 .center[
-![アプリ登録](newPushTest.png)
+![アプリ登録](readme-image-en/newPushTest.png)
 ]
 
 ---
