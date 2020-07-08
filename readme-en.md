@@ -18,6 +18,15 @@ to register your account.
 
 ![mBaaS検索](readme-image-en/mBaaS無料登録.png)
 
+---
+## Preparation(Access from outside of Japan)
+
+- English service site:
+https://mbaas.nifcloud.com/en/
+- Control panel supports "Japanese, English, Chinese (Traditional)"
+- To change the language in Control panel, please do the following when you access to Control Panel
+![mBaaS言語選択1](readme-image-en/language1.png)
+![mBaaS言語選択2](readme-image-en/language2.png)
 
 ---
 ## Preparation
@@ -31,15 +40,9 @@ Register with one of the following accounts
   - Register from [Here](https://sso.nifcloud.com/auth/realms/nifcloud/protocol/openid-connect/registrations?client_id=user-registration&response_type=code&redirect_uri=%2Fcomp-registration.html&entry_code=N00000470100) (Japanese only)
 
 ---
-## Preparation(Access from outside of Japan)
+## Preparation
 
-- English service site:
-https://mbaas.nifcloud.com/en/
-- Control panel supports "Japanese, English, Chinese (Traditional)"
-- To change the language in Control panel, please do the following when you access to Control Panel
-![mBaaS言語選択1](readme-image-en/language1.png)
-![mBaaS言語選択2](readme-image-en/language2.png)
-
+![mBaaS検索](readme-image-en/mbaas_sns_account_register.png)
 
 ---
 ## Operating Environment
