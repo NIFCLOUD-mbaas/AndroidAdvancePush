@@ -1,4 +1,4 @@
-# Notice before about project
+# Notice about starting project in AndroidStudio
 
 ## Project download link
 
