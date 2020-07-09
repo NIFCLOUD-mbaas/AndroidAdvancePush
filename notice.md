@@ -11,6 +11,17 @@ and select the folder you unzipped the project.
 
 ![AndroidStudio](notice-image/Welcome_to_Android_Studio.png)
 
+After open the first time, please wait until Gradle Sync progress done, and check if it is Successful or not.
+The following image is when Gradle Sync completed successful.
+
+
+![AndroidStudio2](notice-image/gradle_sync.png)
+
+If error happened, please check the following Recommended Environment.
+And after you changed some settings, please Gradle Sync Again.
+If apk exists error happened, you need to clean the project by select Build Menu > Clean Project.
+
+
 ## Operating Environment(2020/7 Updated)
 
 This Seminar project is prepared for the following environment
