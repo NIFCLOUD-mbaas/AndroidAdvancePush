@@ -12,12 +12,21 @@ class: center, middle, inverse
 ---
 layout: false
 ## Preparation
-If you have not registered an account with NIFCLOUD mobile backend yet<br>
-[Service Site](https://mbaas.nifcloud.com/en/) Click the "Sign up" button in the upper right corner<br>
+If you have not registered an account with NIFCLOUD mobile backend yet, <br>
+Click the "Sign up" button in the upper right corner on [Service Site](https://mbaas.nifcloud.com/en/)<br>
 to register your account.
 
 ![mBaaS検索](readme-image-en/mBaaS無料登録.png)
 
+---
+## Preparation(Access from outside of Japan)
+
+- English service site:
+https://mbaas.nifcloud.com/en/
+- Control panel supports "Japanese, English, Chinese (Traditional)"
+- To change the language in Control panel, please do the following when you access to Control Panel
+![mBaaS言語選択1](readme-image-en/language1.png)
+![mBaaS言語選択2](readme-image-en/language2.png)
 
 ---
 ## Preparation
@@ -31,15 +40,9 @@ Register with one of the following accounts
   - Register from [Here](https://sso.nifcloud.com/auth/realms/nifcloud/protocol/openid-connect/registrations?client_id=user-registration&response_type=code&redirect_uri=%2Fcomp-registration.html&entry_code=N00000470100) (Japanese only)
 
 ---
-## Preparation(Access from outside of Japan)
+## Preparation
 
-- English service site is here
-https://mbaas.nifcloud.com/en/
-- Control panel supports "Japanese, English, Chinese (Traditional)"
-- To change the language in Control panel, please do the following when you access to Control Panel
-![mBaaS言語選択1](readme-image-en/language1.png)
-![mBaaS言語選択2](readme-image-en/language2.png)
-
+![mBaaS検索](readme-image-en/mbaas_sns_account_register.png)
 
 ---
 ## Operating Environment
@@ -55,27 +58,27 @@ This Seminar project is prepared for the following environment
 
 - We will implement functions in 3 steps.
 - Create an App in lecture style by repeating instructions and exercises.
-- Whole progress will be chekced by taking the operation check time and break time.
+- Whole progress will be checked by taking operation checking time and break time.
 - Q&A time will be held at any time.
-- We have translated the materials as much as possible.
+- We have translated the materials into English as much as possible.
 However, some App screen, control panel and function name are still in Japanese.
-We will supplementary explain for those, but we appreciated your understanding in advance.
+We will supplementary explain for those, but we appreciate your understanding in advance.
 
 ---
 ## Hands-on Overview
-### About the App to create
+### About the App we are going to create
 
-* Understand the function of mBaaS by creating a App "mBaaS Shop List" a kind of coupon delivery App.
+* Understand the function of mBaaS by creating a "mBaaS Shop List" App, a kind of coupon delivery App.
 * Code the mBaaS integration to complete the App, and realize:
- * After registration to become member, App users can see shop information.
- * App users can register favorite stores and receive push notifications from those stores.
- * Push notifications can be sent selectively by gender or Region.
- * Coupon can be directly delivered through push notification from the store.
- * Push notifications can be automatically sent at a fixed time.
+ * After member registration, App users can see shop information.
+ * App users can register favorite stores and receive Push Notifications from those stores.
+ * Push Notifications can be delivered selectively by gender or Region.
+ * Coupon can be directly delivered through Push Notification from the store.
+ * Push Notifications can be automatically delivered at a fixed time.
 
 ---
 ## Hands-on Overview
-### About App to create
+### About the App we are going to create
 
 .center[
 ![mBaaS_shop_List](readme-image-en/mBaaS_shop_List.png)
@@ -104,8 +107,8 @@ the data of shop information and user's favorites information using the Datastor
 ## About this Hands-on Seminar
 ### Contents：How to Use User Management Function
 
-Through the creation of "mBaaS Shop List" App, user login and logout to be implemented,
-and users linked favorites information to be registered, displayed and managed.
+Through the creation of "mBaaS Shop List" App, user's login and logout functions to be implemented,
+and users favorites information to be registered, displayed and managed.
 These functions to be implemented using the User Management function
 ---
 ## About this Hands-on Seminar
@@ -119,7 +122,7 @@ to be managed using Filestore.
 ### Contents: Practice Push Notification①
 
 Through the creation of "mBaaS Shop List" App, we understand how to build<br>
-effective push notifications that increase active user rate.
+effective Push Notifications that increase active user rate.
 
 .center[
 ![セグメント配信](readme-image-en/seminar/セグメント配信.png)
@@ -130,7 +133,7 @@ effective push notifications that increase active user rate.
 ### Contents：Practice Push Notification②
 
 Through the creation of "mBaaS Shop List" App, we understand how to build<br>
-effective push notifications that increases active user rate.<br>
+effective Push Notifications that increases active user rate.<br>
 
 .center[
 ![リッチプッシュ](readme-image-en/seminar/リッチプッシュ.png)
@@ -138,10 +141,10 @@ effective push notifications that increases active user rate.<br>
 
 ---
 ## About this Hands-on Seminar
-### Contents：Practice Push notification③
+### Contents：Practice Push Notification③
 
 Through the creation of "mBaaS Shop List" App, we understand how to build<br>
-effective push notifications that increases active user rate.<br><br>
+effective Push Notifications that increases active user rate.<br><br>
 
 .center[
 ![ペイロード](readme-image-en/seminar/ペイロード.png)
@@ -237,19 +240,19 @@ __<font color="#49a7e5" size="5">Day 2&nbsp;</font><font size="6">Let's prepare 
 ---
 ## Agenda for Hands-on (continued)
 
-__<font color="#49a7e5" size="5">Day 3&nbsp;</font><font size="6">Let's deliver push notifications! (3h)</font>__
+__<font color="#49a7e5" size="5">Day 3&nbsp;</font><font size="6">Let's deliver Push Notifications! (3h)</font>__
 .size_large[
 1. Prepare Push Notifications
-1. Deliver push notifications: Segment delivery
-1. Deliver push notification: Rich push
-1. Deliver push notification: Payload
+1. Deliver Push Notifications: Segment Delivery
+1. Deliver Push Notification: Rich Push
+1. Deliver Push Notification: Payload
 ]
 
 ---
 layout: true
 class: center, middle, inverse_sub
 ---
-#Let's create <br>"mBaaS Shop List" App!
+#Let's Create <br>"mBaaS Shop List" App!
 
 .size_large[
 ＜Day 1＞
@@ -293,7 +296,7 @@ layout: false
 ---
 layout: false
 ## Preparation for Hands-on
-### Preparation for project
+### Preparation of project
 
 * Adjust the view of your project in Android Studio.
   - Select [Android] in the view options item on the upper left.
@@ -399,7 +402,8 @@ dependencies {
 ### What is already done for the project
 
 * Pre-coding files is mainly as below
- * Create the design of App in the `files in the layout folder`, and to code the Action processing for each screen in an `Activity files`
+ * The design of App is created in the files in the `layout folder`.
+ * And the code to process Action for each screen is in `Activity files`
 
 ---
 
@@ -413,8 +417,8 @@ dependencies {
 
 * Login to [mBaaS](https://console.mbaas.nifcloud.com/) to create the App
 * On the App creation screen, enter the App name and click "+ New App"
-* If the App is created successfully, the "application key" and "client key" (API key) of the new App will be displayed.
-Make a note of them by copy and paste as we will use them later.
+* If the App is created successfully, "Application Key" and "Client Key" (API key) of the new App will be displayed.
+Make a note of them by copying and pasting as we will use them later.
 
 ![mBaaSアプリ作成](readme-image-en/mBaaSアプリ作成.png)
 
@@ -423,7 +427,7 @@ Make a note of them by copy and paste as we will use them later.
 ### API key setting and SDK initialization
 
 * Open the `MainActivity.java`
-* Add in the `onCreate()` method following process below the comment[Library import processing is already implemented]
+* Add the following process below the comment in the `onCreate()` method. [Library import processing is already implemented]
 
 ```java
 //**************** 【mBaaS/Initialization: Specify API key】***************
@@ -454,7 +458,7 @@ layout: false
 
 * mBaaS has "ID/Password Authentication" and "Email Address/Password Authentication" as User Management function.
 In this hands-on, we will use "Email Address/Password Authentication" function.
-* Allow "Email Address/Password Authentication" in User Authentication Settings.
+* Allow to use "Email Address/Password Authentication" in User Authentication Settings.
 
 .center[
 ![mBaaS会員設定](readme-image-en/mBaaS会員設定.png)
@@ -484,7 +488,7 @@ In this hands-on, we will use "Email Address/Password Authentication" function.
 ## Create User Management function
 ### User Management①：Request a membership registration email
 
-* For member registration process, please add the implementation code as follows
+* For member registration processing, please add the implementation code as follows
 ```java
 //**************** 【mBaaS/User①】: Request a Membership Registration email】***************
 String email = _signupEmail.getText().toString();
@@ -652,7 +656,7 @@ AlertDialog show = new AlertDialog.Builder(LoginActivity.this)
 
 * Return to the login screen again, and log in with your "email address" and "password". Make sure that you can log in successfully.
  * Please check the log.
-* In addition, check the registered user information on the mBaaS management screen.
+* In addition, check the registered user information on the mBaaS administration screen.
  * Select "User Management" at the the administration screen, and then select "All Users".
  * Users are registered in user list
 
@@ -668,10 +672,13 @@ AlertDialog show = new AlertDialog.Builder(LoginActivity.this)
 ### About Code(1)Let's Log in!
 
 * In order to request an email for membership registration, we make an API request using the following method provided by the Android SDK.
+
 ```java
 NCMBUser.requestAuthenticationMailInBackground(email, DoneCallback());
 ```
-* A default membership registration email format will be sent. (This time email is in Japanese, but the mail format and domain can be customized.)
+
+* A default membership registration email format will be sent. (Email is in Japanese this Lecture,
+but the email format and domain can be customized.)
 
 ---
 ## Create User Management Function
@@ -702,7 +709,7 @@ When the result is returned from the server side, the pattern processing which i
 
 * Open `RegisterActivity.java`
 * Open `doRegister()`
-* Implement the process of adding the information entered on the first-time user information registration screen to the mBaaS user information.
+* We are going to implement the process which the information registered on the screen for first-time App user login to the App.
 * We are now going to add code below the comment.
 
 ```java
@@ -793,6 +800,15 @@ new AlertDialog.Builder(RegisterActivity.this)
 ### Operation check(2)Register Member Information
 
 .center[
+![UserInfoRegistration](readme-image-en/UserInfoRegistration.png)
+]
+
+
+---
+## Create User Management Function
+### Operation check(2)Register Member Information
+
+.center[
 ![動作確認②ユーザー情報追加](readme-image-en/動作確認②ユーザー情報追加.png)
 ]
 .footnote[
@@ -851,7 +867,7 @@ Here you can see how it is imported.
 ## Setting Shop Information
 ### Prepare Shop information in mBaaS (Filestore)
 
-* Open "Filestore" from the NIFCLOUD mobile backend administration screen, and click the "↑ Upload" button.
+* Open "Filestore" from NIFCLOUD mobile backend administration screen, and click the "↑ Upload" button.
 * Upload all files located in "icon" "Shop" "Sale" which are in the Setting folder in the sample project that you downloaded.
 
 ---
@@ -1038,7 +1054,7 @@ try {
 
 ---
 ## Setting Shop Information
-### Operation check(2) Diplay Shop Information
+### Operation check(2) display Shop Information
 
 * Build again with the simulator and check the operation.
 * After the registration of user information (only appears at first time) is completed, the top screen of the App to be displayed. (The top screen will be directly displayed from the 2nd log in.)
@@ -1050,7 +1066,7 @@ try {
 
 ---
 ## Setting Shop Information
-### Operation check(2) Diplay Shop Information
+### Operation check(2) display Shop Information
 
 .center[
 ![動作確認②](readme-image-en/動作確認②.png)
@@ -1061,10 +1077,10 @@ try {
 
 ---
 ## Setting Shop Information
-### About code(2)Diplay Shop Information
+### About code(2)display Shop Information
 
 * In order to display the list of shops, the Shop class data registered in the data store is searched and acquired.
-To search all data, the find() method provided by the NCMBQuery class is used as following.
+To search all data, the find() method provided by NCMBQuery class is used as following.
 
 ```java
 // Create query for "Shop" class
@@ -1073,14 +1089,15 @@ NCMBQuery<NCMBObject> query = new NCMBQuery<>("Shop");
 List<NCMBObject> results = query.find();
 ```
 
-* mBaaS allows to specify search criteria, although we do not specify this time.
+* mBaaS allows to specify search criteria, although we do not specify in this lecture.
 please see[document](https://mbaas.nifcloud.com/doc/current/datastore/basic_usage_android.html#%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E6%A4%9C%E7%B4%A2%E3%81%AE%E5%88%A9%E7%94%A8&gsc.tab=0) on searching.
 * When searching for a large amount of data, set a limit of number of data.(Default of limit is 100,
-  Up to 1000 can be specified. In case of more than 1000, specify the number of skipped data, and use them together with a skip item that can be set as the start point of the obtained data.)
+  Up to 1000 can be specified. In case of more than 1000, specify the number of skipped data,
+  and use them together with a skip item that can be set as the start point of the obtained data.)
 
 ---
 ## Setting Shop Information
-### About code(2)Diplay Shop Information
+### About code(2)display Shop Information
 
 * To acquire the image in filestore, specify the file name and use fetchInBackground() to download the file
 when generate instance of NCMBFile as follows.
@@ -1094,7 +1111,7 @@ file.fetchInBackground(new FetchFileCallback());
 layout: true
 class: center, middle, inverse_sub
 ---
-# Prepare for Favorites Function and push Notification!
+# Prepare for Favorites Function and Push Notification!
 
 ---
 layout: true
@@ -1206,7 +1223,9 @@ new AlertDialog.Builder(FavoriteActivity.this)
 ## Create Favorites Function
 
 ### User Management⑤：Update User Information
+
 * The code to add is followings.
+
 ```java
 //**************** 【mBaaS/User⑤: update member information】***************
 List<String> list = new ArrayList<String>();
@@ -1323,12 +1342,12 @@ layout: false
 
 * We need to prepare the following
  * Android device for debugging (7.0~)
- * Google Account (To use Firebase Cloud Messaging, a push notification for Android)
+ * Google Account (To use Firebase Cloud Messaging, a Push Notification for Android)
 * Main settings
- * Set Firebase private key to mobile backend
- * Put google-service.json in App
-* Detailed instructions for the push notification setting file (json) are described below.
- * [【Sample】Let's implement push notifications into the App!](https://github.com/NIFCLOUD-mbaas/android_push_demo#手順)
+ * 1. Set Firebase private key to mobile backend
+ * 2. Put google-service.json in App
+* Detailed instructions for the Push Notification setting file (json) are described below.
+ * [【Sample】Let's implement Push Notifications into the App!](https://github.com/NIFCLOUD-mbaas/android_push_demo#手順)
 
 
 ---
@@ -1355,8 +1374,8 @@ https://console.firebase.google.com/
 ## Preparation for Push Notification
 ### Preparation for Push Notification
 
-* On upper left corner of the created project there is a link "Project OverView".
-* Move the cursor to the gear button, and the menu will appear. Click "Project Settings". This takes you to the Firebase Project Settings screen.
+* Open the created project. On upper left corner of the created project there is a link "Project OverView".
+* Move the cursor to the Gear button, and the menu will appear. Click "Project Settings". This takes you to the Firebase Project Settings screen.
 
 .center[
 ![コード解説③](readme-image-en/Firebase_projectsettings.png)
@@ -1390,8 +1409,8 @@ https://console.firebase.google.com/
 ### Set Firebase Private Key to Mobile Backend
 
 * Select "App Settings" at the top right of mBaaS administration screen and select "Push Notification".
-* Validate push notifications function
-* Set the private key downloaded in the previous step as the push notification configuration file (json).
+* Validate Push Notifications function
+* Set the private key downloaded in the previous step as the Push Notification configuration file (json).
 
 ---
 ## Preparation for Push Notification
@@ -1406,8 +1425,10 @@ https://console.firebase.google.com/
 ### Create google-services.json File
 
 1. Log in to [Firebase](https://console.firebase.google.com/u/0/) , and open project.
-2. Click ![設定アイコン](readme-image-en/settingIcon.png) located on the right side of "Project Overview, and select "Set Project".
-3. With the "General" tab, select the "Android" platform icon in My Apps.
+2. Click ![設定アイコン](readme-image-en/settingIcon.png) located on the right side of "Project Overview, and select "Project Settings".
+3. Open the "General" tab, select the "Android" platform icon in My Apps in the end of the page.
+
+---
 
 .center[
 ![FirebaseSetting](readme-image-en/Firebasesetting.png)
@@ -1418,23 +1439,19 @@ https://console.firebase.google.com/
 ## Preparation for Push Notification
 ### Set google-services.json File
 
-4. Publish google-services.json and register in the App
-* Enter the application ID in the [Android Package Name] field.</br>
-i.e.) com.nifcloud.AndroidAdvancePushApp * package name of the current project
+4.Publish google-services.json and register in the App
+* Enter the application package name in the [Android Package Name] field.</br>
+i.e.) mbaas.com.nifcloud.advancepush * package name of the current project
+
+5.Add google-services.json
+* Click "Download google-services.json", and acquire Firebase Android configuration file（google-services.json）.
+* Open the project which is being used in Android Studio, and move to the App module (App Level) directory.
 
 ---
 
 .center[
 ![アプリ登録](readme-image-en/RegisterApp.png)
 ]
-
----
-## Preparation for Push Notification
-### Set google-services.json File
-
-5. Add google-services.json
-* Click "Download google-services.json", and acquire Firebase Android configuration file（google-services.json）.
-* Open the project which is being used in Android Studio, and move to the App module (App Level) directory.
 
 ---
 
@@ -1446,7 +1463,7 @@ i.e.) com.nifcloud.AndroidAdvancePushApp * package name of the current project
 ## Preparation for Push Notification
 ### Set google-services.json File
 
-6. add google-services plugin to the Gradle file in order to validate Firebase product with App.
+6.add google-services plugin to the Gradle file in order to validate Firebase product with App (If necessary).
 
 * Add a rule to include Google service plugins
 in the Gradle file (build.gradle) at the root level (Project Level)
@@ -1455,7 +1472,7 @@ in the Gradle file (build.gradle) at the root level (Project Level)
 classpath 'com.google.gms:google-services:4.3.3'
 ```
 
-* With Gradle file (Usually app/build.gradle) of module (App level), add the following line to the end of the file.
+* With Gradle file (Usually app/build.gradle) of module (App level), add the following line to the end of the file (If necessary).
 
 ```
 apply plugin: 'com.google.gms.google-services'
@@ -1503,7 +1520,7 @@ NCMB.initialize(this.getApplicationContext(),"APP_KEY","CLIENT_KEY");
 
 ---
 ## Preparation for Push Notification
-### Operation check for push notification①：Register Device
+### Operation check for Push Notification①：Register Device
 
 * Build the app on the device.
 * Please activate the App. Check if the device information is registered on mBaaS administration screen as follows.
@@ -1514,22 +1531,30 @@ NCMB.initialize(this.getApplicationContext(),"APP_KEY","CLIENT_KEY");
 
 ---
 ## Preparation for Push Notification
-### Operation check for push notification①：Deliver Test Push Notification
+### Operation check for Push Notification①：Deliver Test Push Notification
 
-* Let's deliver push notification
+* Let's deliver Push Notification
 * Open "Push Notification" on mBaaS administration screen, and click "+ New Push Notification".
 * On the Push Notification setting screen:
  * Enter message and title as you want
  * Leave [Deliver Immediately] as it is.
  * Check [Deliver to Android devices].
- * Click [New push notification] , and deliver
+ * Click [New Push Notification] , and deliver
 
 ---
 ## Preparation for Push Notification
-### Operation check for push notification①：Deliver Test Push Notification
+### Operation check for Push Notification①：Deliver Test Push Notification
+
+.center[
+![アプリ登録](readme-image-en/newPushTest.png)
+]
+
+---
+## Preparation for Push Notification
+### Operation check for Push Notification①：Deliver Test Push Notification
 
 * Confirm that the delivery icon is displayed on the device.
-* Open "Push Notification" on mBaaS administration screen, and check the status of created push notification in the push notification list.
+* Open "Push Notification" on mBaaS administration screen, and check the status of created Push Notification in the Push Notification list.
 * If it is succeeded, "Delivered" is displayed.
 * If error occurs, please refer to the [document](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#%E3%80%8C%E9%85%8D%E4%BF%A1%E3%82%A8%E3%83%A9%E3%83%BC%E5%86%85%E5%AE%B9%E3%80%8D%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6) , and Review the settings.
 
@@ -1560,8 +1585,6 @@ layout: false
 ```
 
 ---
-## Deliver Push Notification：Segment Delivery
-### Push Notification②：Link User Information to installation
 
 * Add the following.
 
@@ -1741,7 +1764,7 @@ Saving device information succeeded.
 ## Deliver Push Notification：Segment Delivery
 ### Operation Check(4)Segment Delivery
 
-Let's deliver push notifications by narrowing users who have has registered __shopB__ as favorites!
+Let's deliver Push Notifications by narrowing users who have has registered __shopB__ as favorites!
 
 * Set shopB as favorite beforehand (App side)
 * From the mBaaS administration screen, open the Shop class data and copy the shopB "objectId".
@@ -1754,7 +1777,7 @@ Let's deliver push notifications by narrowing users who have has registered __sh
 ## Deliver Push Notification：Segment Delivery
 ### Operation Check(4)Segment Delivery
 
-* Create push notification
+* Create Push Notification
 * Enter a message
  * i.e.：ShopB Now on sale!
 * Check "Deliver to Android device".
@@ -1785,7 +1808,7 @@ Let's deliver push notifications by narrowing users who have has registered __sh
 ### Operation Check(4)Segment Delivery
 
 * It is OK if "1 Send to devices" is displayed.
-* Click "New push notification"
+* Click "New Push Notification"
 * It will be delivered after waiting for a while → Check the device!
 
 .center[
@@ -1817,8 +1840,8 @@ layout: false
 ## Deliver Push Notification：Rich Push
 ### About Rich Push
 
-* This function allows to display a Web view when open a push notification by specifying a URL at the time of push notification registration.
-* Web view appears when App is activated by opening push notification.
+* This function allows to display a Web view when open a Push Notification by specifying a URL at the time of Push Notification registration.
+* Web view appears when App is activated by opening Push Notification.
  * It can not be displayed while the application is activating, so App needs to be closed to check the operation (spec).
 
 ---
@@ -1880,14 +1903,14 @@ layout: false
 * Add code directly below the comment
 
 ```java
-//********** 【mBaaS：Push Notification⑥】process for displaying rich push notifications *********
+//********** 【mBaaS：Push Notification⑥】process for displaying rich push Notifications *********
 ```
 
 * Add the following.
 
 ```java
-//********* 【mBaaS：Push Notification⑥】process for displaying rich push notifications **********
-//Diplay rich push notifications
+//********* 【mBaaS：Push Notification⑥】process for displaying rich push Notifications **********
+//display rich Push Notifications
 NCMBPush.richPushHandler(this, getIntent());
 
 //If you don't want the rich push to re-display, delete the URL from the intent
@@ -1924,8 +1947,8 @@ getIntent().removeExtra("com.nifcloud.mbaas.RichUrl");
 ## Deliver Push Notification：Rich Push
 ### Operation Check(5)Rich Push
 
-* After a while, you will receive a push notification.
-* When you open the push notification, WebView screen appears and the public file is displayed.
+* After a while, you will receive a Push Notification.
+* When you open the Push Notification, WebView screen appears and the public file is displayed.
 * Notice that if you are not logged in, you need to login first.
 
 .center[
@@ -1943,9 +1966,9 @@ layout: false
 ## Deliver Push Notification：Payload
 ### About Payload
 
-* Push notifications can contain arbitrary data in JSON format, and can receive and process that data when receiving notification.
+* Push Notifications can contain arbitrary data in JSON format, and can receive and process that data when receiving notification.
 * Today, we are going to set the delivery time and data of message, and implement the content to display the local push in a timed manner.
-* Example of JSON-formatted data for push notifications setting
+* Example of JSON-formatted data for Push Notifications setting
 
 ```text
 {"deliveryTime":"2016-09-22 17:00:00", "message":"Time Sale Started!"}
@@ -2037,7 +2060,7 @@ if (remoteMessage != null && remoteMessage.getData() != null) {
 ### Deliver Push Notification：Payload
 ### Push Notification⑦：App Obtains Data from Push Notification</br>
 * We are going to implement payload processing
-* Display local push notifications at the specified time.
+* Display local Push Notifications at the specified time.
 
 
 ---
@@ -2082,7 +2105,7 @@ Saving device information succeeded.
 ## Deliver Push Notification：Payload
 ### Operation Check(6)Payload（When the App is activated）
 
-* Create JSON-formatted data for push notifications
+* Create JSON-formatted data for Push Notifications
  * Change the time set for JSON data from now to __5 minutes or later__
  * change the message you set for the JSON data as you want
  ```text
@@ -2111,13 +2134,13 @@ Saving device information succeeded.
 ### Operation Check(6)Payload（When the App is activated）
 
 * Deliver Push Notification
-* The following log is displayed when push notification is received(silent)
+* The following log is displayed when Push Notification is received(silent)
 
 ```text
 Acquired payload!
 ```
 
-* Please make sure the push notification appears at the specified time.
+* Please make sure the Push Notification appears at the specified time.
 
 .footnote[
 [Error code list](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
@@ -2142,7 +2165,7 @@ Acquired payload!
 ### Operation Check(6)Payload（When the App is NOT activated）
 
 * The App is not running, so users cannot notice by silent push.
-* Create a push notification with the content to attract users to activate App.
+* Create a Push Notification with the content to attract users to activate App.
  * Message　i.e.）`Limited-time sale from 5 o'clock tomorrow!`
 * Paste data in JSON format
  * Create JSON data 　i.e.）Set for 5 PM tomorrow
@@ -2155,10 +2178,10 @@ Acquired payload!
 ## Deliver Push Notification：Payload
 ### Operation Check(6)Payload（When the App is NOT activated）
 
-* Once you receive push notification, activate App from the push notification.
+* Once you receive Push Notification, activate App from the Push Notification.
 * Acquire data when the App activates
  * You can close the App if it has been activated once.
-* Please make sure the push notification is displayed at the specified time
+* Please make sure the Push Notification is displayed at the specified time
 
 ---
 layout: true
@@ -2175,8 +2198,8 @@ layout: false
  * User Management
  * Datastore
  * Filestore
- * Push notification
-* How to utilize push notifications
+ * Push Notification
+* How to utilize Push Notifications
  * Segment delivery
  * Rich push
  * Payload
@@ -2213,10 +2236,11 @@ apply plugin: 'com.google.gms.google-services'
 ```
 * Remember to change YOUR_APPLICATION_KEY, YOUR_CLIENT_KEY
 
+
 ---
 ## About master project (2)
 
-* In Push Notification preparation part and to test other push notification features, after copy google-services.json to Project, remove the comment out code // from the line.
+* In Push Notification preparation part and to test other Push Notification features, after copy google-services.json to Project, remove the comment out code // from the line.
 
 ```
 //apply plugin: 'com.google.gms.google-services'
